@@ -1,0 +1,98 @@
+//---------------------------------------------------------------------// 
+
+//  ƒyÃdª«½u©Ê¦ê¦CÃş§OPetList¡]¤¶­±³¡¤À¡^j      "petlist.h"       // 
+
+//---------------------------------------------------------------------// 
+
+                                                                                 
+
+#include    <iostream.h>                                                         
+
+                                                                                 
+
+#include    "pet.h"                                                              
+
+                                                                                 
+
+//-----Ãdª«¸`ÂIÃş§O-----//                                               
+
+class PetNode {
+
+                                                                                 
+
+    friend class  PetList;                                                       
+
+                                                                                 
+
+private:                                                                         
+
+    Pet*     pet;           //Ãdª«ªº¸ê®Æ        
+
+    PetNode* next;          //«ü¦V«áÄò¸`ÂIªº«ü¼Ğ       
+
+                                                                                 
+
+public:                                                                          
+
+    PetNode(Pet* ptr) : pet(ptr) { next = NULL; }       // «Øºc¤¸ƒ^        
+
+    ~PetNode(void)          { delete pet; }             // ¸Ñºc¤¸  
+
+  
+
+    PetNode* Next(void)     { return (next); }          //«áÄò¸`ÂI        
+
+    operator Pet*(void)     { return (pet);  }          // Âà´«¨ç¼Æ        
+
+};                                                                               
+
+                                                                                 
+
+//----- Ãdª«½u©Ê¦ê¦CÃş§O -----//                                           
+
+class PetList {  
+
+    //  ³o­ÓÃş§O¬°Ãş§OPetNodeªºfriend¡C                                    
+
+                                                                                 
+
+    friend ostream& operator<<(ostream& s, const PetList& x);                    
+
+                                                                                 
+
+private:                                                                         
+
+    PetNode*  top;          // «ü¦V¶}ÀY¸`ÂIªº«ü¼Ğ        
+
+    PetNode*  bottom;       // «ü¦V¥½ºİ°²¸`ÂIªº«ü¼Ğ       
+
+                                                                                 
+
+public:                                                                          
+
+    PetList(void);                                      // «Øºc¨ç¼ÆƒNƒ^        
+
+    ~PetList(void);                                     // ¸Ñºc¨ç¼Æƒ^          
+
+                                                                                 
+
+    PetNode* Top(void) { return ((top == bottom) ? NULL : top); }                
+
+    PetNode* Bottom(void);                                                       
+
+                                                                                 
+
+    PetList& Insert(PetNode*);                          //¦b¶}ÀY´¡¤J¸`ÂI
+    PetList& Append(PetNode*);                          //¦b¥½ºİ·s¼W¸`ÂI
+    PetList& Delete(void);                              //§R°£¶}ÀY¸`ÂI
+    PetList& Remove(void);                              //§R°£¥½ºİ¸`ÂI
+    PetList& Clear(void);                               //§R°£©Ò¦³¸`ÂI      
+
+                                                                                 
+
+    PetList& Introduce(void);                           //¦Û§Ú¤¶²Ğ
+};                                                                               
+
+                                                                                 
+
+ostream& operator<<(ostream&, const PetList&);          // ´¡¤J¹Bºâ¤l         

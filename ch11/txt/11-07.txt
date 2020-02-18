@@ -1,0 +1,54 @@
+//----------------------------------------------------------------------// 
+
+ //  銀行帳戶類別account（介面部分）    "account.h"         // 
+
+//---------------------------------------------------------------------// 
+
+                                                                                  
+
+ //===== 銀行帳戶類別 =====//                                                   
+
+ class account {
+
+                                                                                  
+
+ private:                            //===== 私有部分 =====//                       
+
+     long    number;                     //帳戶號碼
+
+     long    savings;                      // 存款額                               
+
+                                                                                  
+
+ public:                             //===== 公用部份 =====//                       
+
+     account(long no, long sav);           // 建構函數                       
+
+                                                                                  
+
+     void save(long money);             // 存錢至帳戶內
+
+                                                                                  
+
+     void withdraw(long money);             // 自帳戶提款                   
+
+                                                                                  
+
+     long account_no(void) {               // 帳戶號碼                            
+
+         return (number);                                                         
+
+     }                                                                            
+
+                                                                                  
+
+     long savings amount(void) {              // 存款額                              
+
+         return (savings);                                                         
+
+     }                                                                            
+
+ };                                                                               
+
+
+                                                                                   

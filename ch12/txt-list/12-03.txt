@@ -1,0 +1,40 @@
+ /*                                                                            
+
+     ì˙ïtÉN§È¥¡√˛ßODate≤ƒ1™©  ¢w®œ•ŒπÍ®“¢wó· Å|                                      
+
+ */                                                                            
+
+                                                                               
+
+ #include    <iostream.h>                
+
+ #include    "date.h"                     
+
+                                         
+
+ int main(void)                                                                
+
+ {
+
+     Date MyBirthday( 1963, 11, 18);     //ß⁄™∫•Õ§ÈÇÃíaê∂ì˙                         
+
+     Date UnivTaipei(1995,  8, 23);     // ∞Íª⁄æ«•ÕπB∞ §j∑|•x•_¡|øÏ§È
+
+                                                                           
+
+     cout << "MyBirthday = "  << MyBirthday.Year()   << "¶~îN"                   
+                              << MyBirthday.Month()  << "§Î"                   
+
+                              << MyBirthday.Day()    << "§È\n";                
+
+                                                                               
+
+     cout << "UnivFukuoka = " << UnivTaipei.Year()  << "¶~"                   
+
+                              << UnivTaipei.Month() << "§Î"                   
+
+                              << UnivTaipei.Day()   << "§È\n";                
+
+     return (0);                                                               
+
+ }                                                                           

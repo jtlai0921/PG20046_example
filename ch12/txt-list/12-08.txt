@@ -1,0 +1,45 @@
+ //---------------------------------------------------------------------// 
+
+ // ±a¶≥∂}§·§È¥¡™∫ª»¶Ê±b§·√˛ßOaccount°]§∂≠±≥°§¿°^Åj   "account.h"         // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                  
+
+ #include    "date.h"                                                             
+
+                                                                                  
+
+ //=====ª»¶Ê±b§·√˛ßO=====//                                                   
+
+ class account {
+
+                                                                                  
+
+ private:                                                                         
+
+     long    number;                     //±b§·∏πΩX
+
+     long    savings;                      // ¶s¥⁄√B
+
+     Date    open;                   // ∂}§·§È                                                                               
+
+ public:                                                                          
+
+    account(long no, long sav, int y, int m, int d);      // ´ÿ∫c®Áº∆É^        
+
+                                                                                  
+
+     void save(long money);                         // ¶sø˙¶‹±b§·§∫å˚ç¿Ç…Ç®ã‡ÇóaÇØÇÈ    
+
+     void withdraw(long money);                     // ¶€±b§·®˙¥⁄     
+
+                                                                                  
+
+     long AccountNo(void)      { return (number); }        //±b§·∏πΩX        
+
+     long Savings amount(void)    { return (savings); }         //¶s¥⁄√Bäz            
+
+     Date Open day(void)   { return (open); }      //∂}§·§È
+
+ };                                                                               

@@ -1,0 +1,44 @@
+ List1-5 
+
+ /*                                                                 
+
+     顯示所輸入的兩個整數之和（C語言）                           
+
+ */                                                                 
+
+                                                                    
+
+ #include    <stdio.h>                                              
+
+                                                                    
+
+ int main(void)                                                     
+
+ 
+                                                                    
+
+     int     x;          /* 整數x的宣告 */                         
+
+     int     y;          /* 整數y的宣告 */                         
+
+                                                                    
+
+     printf("請輸入x：");      /*提示輸入x */
+
+     scanf("%d", &x);          /* 將x以整數讀取*/
+
+                                                                    
+
+     printf("請輸入y：");       /* 提示輸入y */
+
+     scanf("%d", &y);           /* 將y以整數讀取 */
+
+                                                                    
+
+     printf("ｘ＋ｙ等於%d。\n", x+y);                            
+
+                                                                    
+
+     return (0);                                                    
+
+ }                                                                  

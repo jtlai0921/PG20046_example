@@ -1,0 +1,42 @@
+ /*                                                                           
+
+     依據標準函數庫操作字串                                  
+
+ */                                                                           
+
+                                                                              
+
+ #include    <string.h>            
+
+ #include    <iostream.h>            
+
+
+ int main(void)                     
+
+ {
+
+     char    x[100];                                                          
+
+     char    y[100];                                                          
+
+     char    z[100];                                                          
+
+                                                                              
+
+     cout << "請輸入字串x：";                                    
+
+     cin >> x;                                                                
+
+                                                                              
+
+     cout << "字串y的長度：" << strlen(strcpy(y, x)) << '\n';              
+
+                                                                              
+
+     cout << "字串z：" << strcat(strcpy(z, y), x) << '\n';                  
+
+                                                                              
+
+     return (0);                                                              
+
+ }                                                                            

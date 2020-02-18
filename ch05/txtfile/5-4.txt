@@ -1,0 +1,48 @@
+List5-4
+ /*                                                       
+
+     參考物件                                     
+
+ */                                                       
+
+                                                          
+
+ #include    <iostream.h>                                 
+
+                                                          
+
+ int main(void)                                           
+
+ {                                                        
+
+     int     x = 1;                                       
+
+     int     y = 2;                                        
+
+     int&    a = x;         // 將a用x初始化 （a參考b）
+
+                                                          
+
+     cout << "a = " << a << '\n';                         
+
+     cout << "x = " << x << '\n';                         
+
+     cout << "y = " << y << '\n';                         
+
+                                                          
+
+     a = 5;          //將5代入a
+
+                                                          
+
+     cout << "a = " << a << '\n';                         
+
+     cout << "x = " << x << '\n';                         
+
+     cout << "y = " << y << '\n';                         
+
+                                                          
+
+     return (0);                                          
+
+ }                                                        

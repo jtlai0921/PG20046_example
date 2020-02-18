@@ -1,0 +1,71 @@
+ //--- §R°£¦ê¦C¤¤ªº¥þ³¡¤¸¯À ---//                                 
+
+ PetList& PetList::Clear(void)                          
+{
+
+     PetNode* ptr = bottom; {
+                            
+     while (ptr != bottom) {  
+         PetNode* next = ptr->next; 
+         delete ptr;                
+         ptr = next;                                                       
+
+     }                                                                     
+
+     top = bottom;                                                         
+
+     return (*this);                                                       
+
+ }                                                                         
+
+                                                                           
+
+ //----- ¦Û§Ú¤¶²Ð -----//                                                 
+
+ PetList& PetList::Introduce(void)                                         
+
+ { 
+
+     PetNode* ptr = top;                                                   
+
+     cout << "<<----------------¦Û§Ú¤¶²Ð---------------->>\n";           
+
+     while (ptr != bottom) {
+
+         ptr->pet->Sintro();                                               
+
+         ptr = ptr->next;                                                  
+
+     }                                                                     
+
+     cout << "<<------------------------------------------>>\n";           
+
+     return (*this);                                                       
+
+ }                                                                         
+
+                                                                           
+
+ //-----Ãdª«¦ê¦C¡E¬yµ{¡]stream¡^´¡¤J¹Bºâ¤lŽq -----//                       
+
+ ostream& operator<<(ostream& s, const PetList& x)                         
+
+ {
+
+     PetNode* ptr = x.top;                                                 
+
+     s << "{\n";                                                           
+
+     while (ptr != x.bottom) {
+
+         s << '\t' << *(Pet*)(*ptr) << '\n';                               
+
+         ptr = ptr->Next();                                                
+
+     }                                                                     
+
+     s << "}\n";                                                           
+
+     return (s);                                                           
+
+ }                                                                         

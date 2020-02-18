@@ -1,0 +1,89 @@
+ //---------------------------------------------------------------------// 
+
+ // 結合陣列用2部枝幹節點類別BinNode（實現部分）    "binnode.c"       // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                  
+
+ #include    <string.h>                                                           
+
+                                                                                  
+
+ #include    "binnode.h"                                                          
+
+                                                                                  
+
+ //--- 建構元 ---//                                                       
+
+ BinNode::BinNode(char* kstr)                                                     
+
+ {
+
+     left = right = NULL;                                                         
+
+     strcpy(key = new char[strlen(kstr) + 1], kstr);                              
+
+ }                                                                                
+
+                                                                                  
+
+ //--- 解構元 ---// 
+
+ BinNode::~BinNode(void)                                                          
+
+ {
+
+     if (this != NULL) {
+
+         delete left;            //釋出左邊的部分枝幹   
+
+         delete[] key;           // 釋出字串key    
+
+         delete right;           // 釋出右邊的部分枝幹    
+
+     }                                                                            
+
+ }                                                                                
+
+                                                                                  
+
+ //--- 依序輸出部分枝幹上之全部節點 ---//                                         
+
+ void BinNode::Put(void)                                                          
+
+ {  
+
+     if (this != NULL) { 
+
+         left->Put();            // 輸出左邊的部分枝幹   
+
+         PutNode();              // 輸出節點的內容   
+
+         right->Put();           // 輸出右邊的部分枝幹  
+
+     }                                                                            
+
+ }                                                                                
+
+                                                                                  
+
+ //--- 搜尋（friend函數）
+
+---//                                                    
+
+ BinNode** Search(BinNode** t, char *kstr)                                        
+
+ { 
+
+     int cmp;                                                                     
+
+                                                                                  
+
+     while (*t != NULL && (cmp = strcmp(kstr, (*t)->key)) != 0)                   
+
+         t = (cmp < 0) ? &(*t)->left : &(*t)->right;                              
+
+     return (t);                                                                  
+
+ }                                                                                

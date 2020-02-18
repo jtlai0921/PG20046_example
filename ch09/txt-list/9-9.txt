@@ -1,0 +1,89 @@
+ /*                                                                         
+
+    使用指向函數的指標的menu driven 程式的雛型             
+
+ */                                                                         
+
+                                                                            
+ #include    <iostream.h>              
+
+                                       
+
+ typedef enum {                        
+     Termination, Insert, Delete, Print, Invalid 
+
+ } menu;                                         
+
+                                                 
+
+ typedef void (*mfunc)(void);                    
+
+                                                 
+
+ //--- menu１ ---//                          
+
+ void insert(void)                               
+
+ {                                               
+
+     cout << "<資料追加>被選擇了。。\n"; │
+
+ }                                                 
+
+                                                   
+
+//--- menu２ ---//                             
+
+ void delete(void)                                 
+
+ { 
+
+     cout << "<資料刪除>被選擇了。\n";   
+
+ }                                                 
+
+                                                   
+
+ //--- menu３ ---//                            
+
+ void print(void)                                  
+
+ { 
+
+     cout << "<資料列印>被選擇了。\n";   
+
+ }                                                 
+
+                                                   
+
+ //--- menu選擇 ---//                          
+
+ menu SelectMenu(void)                             
+
+ {
+
+     int     ch;                                   
+
+                                                   
+
+     do {
+
+        cout << "(０) 處理結束\n";                          
+
+        cout << "(１) 資料追加\n";                        
+
+        cout << "(２) 資料削除\n";                        
+
+        cout << "(３) 資料列印\n";                        
+
+        cin >> ch;                                          
+
+    } while (ch < Termination || ch >= Invalid);            
+
+    return (menu(ch));                                      
+
+}
+    
+
+
+

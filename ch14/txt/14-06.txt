@@ -1,0 +1,69 @@
+ /*                                                                        
+
+    主動地形成整數物件                                       
+
+ */                                                                        
+
+                                                                           
+
+ #include    <new.h>       
+
+ #include    <iostream.h> 
+
+                          
+
+ int main(void)                                                            
+
+ {
+
+     int  asize;                                                           
+
+     int* a;                                                               
+
+                                                                           
+
+     cout << "請輸入所形成的陣列之元素數：";                   
+
+     cin >> asize;                                                         
+
+                                                                           
+
+     try {
+
+         a = new int[asize];                                               
+
+     }                                                                     
+
+                                                                           
+
+     catch (xalloc) {
+
+         cout << "因無法確保住記憶體，故將程式結束。。\n"; 
+
+         return (1);                                     // 異常結束     
+
+     }                                                                     
+
+                                                                           
+
+     for (int i = 0; i < asize; i++)                                       
+
+         a[i] = i;                                                         
+
+                                                                           
+
+     for (i = 0; i < asize; i++)                                           
+
+         cout << "a[" << i << "] = " << a[i] << '\n';                      
+
+                                                                           
+
+     delete[] a;                                                           
+
+                                                                           
+
+     return (0);                                         // 正常結束     
+
+ }                                                                         
+
+

@@ -1,0 +1,41 @@
+/*                                                                               
+
+  【int】結合陣列的使用實例  單詞出現字數計算                                
+
+*/                                                                               
+
+                                                                                 
+
+#include    <iostream.h>                                                         
+
+                                                                                 
+
+#include    "acaint.h"                                                           
+
+                                                                                 
+
+int main(void)                                                                   
+
+{ 
+
+    AcAint  word;           // int結合陣列                                      
+
+    char    temp[257];                                                           
+
+                                                                                 
+
+    while (cin >> temp)                                                          
+
+        ++word[temp];                                                            
+
+                                                                                 
+
+    cout << '\n';                                                                
+
+    word.Put();                                                                  
+
+                                                                                 
+
+    return (0);                                                                  
+
+}                                                                                

@@ -1,0 +1,36 @@
+ //---§R°£¦ê¦C¥½ºÝªº¤¸¯À ---   //  
+
+PetList& PetList::Remove(void)    
+
+ {    
+
+     if (top == bottom)           
+
+         ;                        
+
+     else if (top->next == bottom)  
+
+         Delete(); 
+ 							
+					      
+else{                     
+
+       PetNode* now = top;        
+
+       PetNode* pre;              
+
+   while (now->next != bottom) {
+     
+       pre = now;                 
+
+       now = now->next; 
+   }
+
+       pre->next = bottom; 
+
+       delete now; 
+
+       return (*this); 
+
+   }
+

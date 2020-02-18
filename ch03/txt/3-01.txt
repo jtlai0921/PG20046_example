@@ -1,0 +1,31 @@
+List3-1
+ /*                                                      
+
+     將輸入拷貝到輸出                              
+
+ */                                                      
+
+                                                         
+
+ #include    <iostream.h>                                
+
+                                                         
+
+ int main(void)                                          
+
+ 
+                                                         
+
+     char    c;                                          
+
+                                                         
+
+     while (cin.get(c))      // 讀取下一個字元
+
+         cout << c;          // 輸出讀取的字元
+
+                                                         
+
+     return (0);                                         
+
+ }                                                       

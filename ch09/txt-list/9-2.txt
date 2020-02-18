@@ -1,0 +1,35 @@
+List 9-2
+ /*                                    
+
+    動態地生成整數物件      
+
+ */                                    
+
+                                       
+
+ #include    <iostream.h>              
+
+                                       
+
+ int main(void)                        
+
+ {
+
+     int* x = new int;                 
+    cout << "請輸入整數："; 
+
+                                      
+
+    cin >> *x;                        
+
+                                      
+
+    cout << "*x = " << *x << '\n';    
+
+     delete x;                              
+
+                                            
+
+     return (0);                            
+
+ }                                          

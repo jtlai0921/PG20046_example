@@ -1,0 +1,23 @@
+/*                                                                                
+
+   表示出2個字串literal的大小                                         
+
+*/                                                                                
+
+                                                                                  
+
+#include    <iostream.h>                    
+
+                                            
+
+int main(void)                              
+
+{
+
+    cout << "sizeof(\"AB\\tC\")   ＝" << sizeof("AB\tC")    << '\n';              
+
+    cout << "sizeof(\"ABC\\0XYZ\")＝" << sizeof("ABC\0XYZ") << '\n';              
+
+    return (0);                                                                   
+
+}                                                                         

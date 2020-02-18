@@ -1,0 +1,24 @@
+List 6-2
+ //--- 傳回元素數n的陣列x的最大值 ---//     
+
+ int maxof(int x[], int n)                          
+ {                                      
+
+     int max = x[0];                    
+
+     for (int i = 1; i < n; i++)          
+
+         if (x[i] > max)                 
+
+             max = x[i];                
+
+     return (max);                     
+ }
+
+應用例
+
+int g[10], k;     
+
+    :             
+
+k = maxof(g, 10); 

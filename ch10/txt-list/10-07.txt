@@ -1,0 +1,53 @@
+ /*                                                                           
+
+     複製字串                                                     
+
+ */                                                                           
+
+                                                                              
+
+ #include    <iostream.h>           
+
+                                    
+
+ //--- 複製字串src到dst ---//          
+
+ void strcopy(char dst[], const char src[])                                   
+
+ {
+
+     for (int len = 0; dst[len] = src[len]; len++)                            
+
+         ;                                                                    
+
+ }                                                                            
+
+                                                                              
+
+ int main(void)                                                               
+
+ {
+
+     char    x[100];                                                          
+
+     char    y[100] = "ABCD";                                                 
+
+                                                                              
+
+     cout << "請輸入字串x：：";                                    
+
+     cin >> x;                                                                
+
+                                                                              
+
+     strcopy(y, x);                            // 複製字串x到y        
+
+                                                                              
+
+     cout << "字串y是" <<y<< "。\n";                                 
+
+                                                                              
+
+     return (0);                                                              
+
+ }                                                                           

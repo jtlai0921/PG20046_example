@@ -1,0 +1,86 @@
+/*                                                                               
+     北家竁ㄢ                                                          
+
+*/                                                                               
+
+                                                                                 
+
+#include    <iostream.h>                       
+
+lass Base1 {                                                                                 
+
+protected:                                                                       
+
+    int x;                                                                       
+
+                                                                                 
+
+public:                                                                          
+
+    void Put(void) { cout << "Base1摸x =" << x << '\n'; }              
+
+};                                                                               
+
+                                                                                 
+
+class Base2 {  
+
+                                                                                 
+
+protected:                                                                       
+
+    int x;                                                                       
+
+                                                                                 
+
+public:                                                                          
+
+    void Put(void) { cout << "Base2摸x =" << x << '\n'; }              
+
+};                                                                               
+
+                                                                                 
+
+class Derived : public Base1, public Base2 {
+
+                                                                                 
+
+public:                                                                          
+
+    void func(int a, int b) {
+
+    //  x = 1;          //岿粇家竁ㄢ丂丂丂                                  
+
+        Base1::x = a;                                                            
+
+        Base2::x = b;                                                            
+
+    }                                                                            
+
+};                                                                               
+
+                                                                                 
+
+int main(void)                                                                   
+
+{ 
+
+    Derived z;                                                                   
+
+                                                                                 
+
+    z.func(1, 2);                                                                
+
+//  z.Print();          //岿粇家竁ㄢ丂                                      
+
+    z.Base1::Put();                                                              
+
+    z.Base2::Put();                                                              
+
+                                                                                 
+
+    return (0);                                                                  
+
+}                                                                                
+
+

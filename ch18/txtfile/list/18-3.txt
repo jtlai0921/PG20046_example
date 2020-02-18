@@ -1,0 +1,60 @@
+ //--------------------------------------------------------------------// 
+
+ // 【int】結合陣列類別  AcAint（介面部分）       "acaint.h"            // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                 
+
+ #include    <iostream.h>                                                        
+
+                                                                                 
+
+ #include    "binnode.h"                                                         
+
+                                                                                 
+
+ //===== 【int】結合陣列節點 =====/                                           
+
+ class ANint : BinNode {                                                         
+                                                                                 
+
+     friend class AcAint;                                                        
+
+                                                                                 
+
+ private:                                                                        
+
+     int data;                                                                   
+
+     ANint(char *kstr) : BinNode(kstr) { data = 0; }                             
+
+     void Put(void)     { cout << Key() << " " << data << '\n'; }                
+
+ };                                                                              
+
+                                                                                 
+
+ //===== 【int】結合陣列 =====/                                                 
+
+ class AcAint { 
+
+                                                                                 
+
+ private:                                                                        
+
+     ANint*      tree;                                                           
+
+                                                                                 
+
+ public:                                                                         
+
+     AcAint(void)        { tree = NULL; }                                        
+
+     ~AcAint(void)       { if (tree != NULL) delete tree; }                      
+
+     void Put(void)  { tree->BinNode::Put(); }                                   
+
+     int& operator[](char*);                                                     
+
+ };                                                                              

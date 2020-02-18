@@ -1,0 +1,65 @@
+List5-3
+ /*                          
+
+    ユ传2把计ぇ岿粇
+
+ */                          
+
+                             
+
+ #include <iostream.h>  
+     
+ //--- ユ传把计x, yぇ- -//
+
+ void swap(int x, int y)
+
+ { 
+     int temp = x;
+
+     x = y;                          
+
+     y = temp;                       
+
+ }                                   
+
+
+                                                                         
+
+ int main(void)                                                          
+{
+                                                                         
+
+     int a;                                                              
+
+     int b;                                                              
+
+                                                                         
+
+     cout << "叫块俱计aぇ : ";                            
+
+     cin >> a;                                                           
+
+                                                                         
+
+     cout << "叫块俱计bぇ? : ";                            
+
+     cin >> b;                                                           
+
+                                                                         
+
+     swap(a, b);                                                         
+
+                                                                         
+
+     cout << "ユ传俱计a籔bぇ\n";                       
+
+     cout << "aぇ琌 << a << "\n";                              
+
+     cout << "bぇ琌" << b << "\n";                              
+
+                                                                         
+
+     return (0);                                                         
+
+ }                                                                       
+

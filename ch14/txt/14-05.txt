@@ -1,0 +1,54 @@
+ /*                                                                             
+
+     整數陣列類別IntAry第2版  ─使用實例─                              
+
+ */                                                                             
+
+                                                                                
+
+ #include    <iomanip.h>                     
+ #include    <iostream.h>                   
+ #include    "intary.h"                      
+ int main(void)                              
+ {                                           
+     int n;                                  
+                                            
+     cout << "輸入元素數：";                                              
+
+     cin >> n;                                                                  
+
+                                                                                
+
+     IntAry  x(n);                                                              
+
+     IntAry  y(n);                                                              
+
+                                                                                
+
+     for (int i = 0; i < n; i++)                                                
+
+         x[i] = i;                                                              
+
+                                                                                
+
+     y = x;                      // 指定                                     
+
+                                                                                
+
+     IntAry z = y;               // 初始化                                      
+
+                                                                                
+
+     cout << "    x    y    z\n";                                               
+
+     cout << "---------------\n";                                               
+
+     for (i = 0; i < n; i++)                                                    
+
+         cout << setw(5) << x[i] << setw(5) << y[i] << setw(5) << z[i] << '\n';   
+
+                                                                                
+
+     return (0);                                                                
+
+ }                                                                              

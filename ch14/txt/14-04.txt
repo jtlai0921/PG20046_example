@@ -1,0 +1,53 @@
+ //---------------------------------------------------------------------// 
+
+ //  整數陣列類別IntAry第2版（實現部分）            "intary.c"        // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                  
+
+ #include    "intary.h"                                                           
+
+                                                                                  
+
+ //---複製建構元---//                                                 
+
+ IntAry::IntAry(const IntAry& x)                                                  
+
+ {
+
+     ptr = new int[x.size];                                                       
+
+     size = x.size;                                                               
+
+     for (int i = 0; i < size; i++)                                               
+
+         ptr[i] = x.ptr[i];                                                       
+
+ }                                                                                
+
+                                                                                  
+
+ //--- 指定運算子 ---//                                                           
+
+ IntAry& IntAry::operator=(const IntAry& x)                                       
+
+ {
+
+     if (&x != this) {               //不指定到自己身上
+
+         delete[] ptr;                                                            
+
+         ptr = new int[x.size];                                                   
+
+         size = x.size;                                                           
+
+         for (int i = 0; i < size; i++)                                           
+
+             ptr[i] = x.ptr[i];                                                   
+
+     }                                                                            
+
+     return (*this);                                                              
+
+ }                                                                                

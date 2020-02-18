@@ -1,0 +1,54 @@
+ /*                                                                         
+
+    銀行帳戶類別Account  ─使用實例─                              
+
+ */                                                                         
+
+                                                                            
+
+ #include    <iostream.h>                     
+                
+
+ #include    "account.h"                      
+
+ int main(void)                               
+
+ {                                            
+
+     Account   Drmaster1(1234569,  0, 1991, 1, 1); 
+
+     Account   Drmaster(3468924, 10, 1992, 2, 2); 
+
+                                            
+
+     Drmaster1.Save(100);      // 小碩存入100元
+
+                                                                            
+
+     Drmaster.Withdraw(5);        //小博取出5元
+
+                                                                            
+
+     cout << "小碩的帳戶\n";                                              
+
+     cout << "帳戶號碼" << Drmaster1.AccountNo()  << '\n';                
+
+     cout << "存 款 額" << Drmaster1.Savings amount() << "元\n";          
+
+     cout << "開 戶 日" << Drmaster1.Openbi() << '\n';                    
+
+                                                                            
+
+     cout << "小博的帳戶\n";                                              
+
+     cout << "帳戶號碼" << Drmaster.AccountNo()  << '\n';                 
+
+     cout << "存 款 額" << Drmaster.Savings amount() << "元\n";           
+
+     cout << "開 戶 日" << Drmaster.Open day() << '\n';                     
+
+                                                                            
+
+     return (0);                                                            
+
+ }                                                                          

@@ -1,0 +1,17 @@
+List1-2
+
+/*
+  執行畫面輸出的程式（C語言）
+*/
+
+#include    <stdio.h>                   
+
+int main(void)          
+
+{
+  puts("第一個C++程式。");
+  puts ("執行畫面輸出。");
+    
+  return (0);
+
+}              

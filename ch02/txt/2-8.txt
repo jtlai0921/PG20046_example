@@ -1,0 +1,71 @@
+ List2-7
+/*                                                                 
+
+   顯示輸入月份的天數。                                  
+
+*/                                                                 
+
+                                                                   
+
+#include    <iostream.h>                                           
+
+                                                                   
+
+int main(void)                                                     
+
+
+                                                                   
+
+    int     month;                                                 
+
+                                                                   
+
+    cout << " 請輸入月份：";                                
+
+    cin >> month;                                                  
+
+                                                                   
+
+    switch (month) 
+                                                       │  │
+     case  2: cout << month << "月是28天或是29天。\n";         
+
+              break;                                               
+
+     case  4:                                                      
+
+     case  6:                                                      
+
+     case  9:                                                      
+
+     case 11: cout << month << "月是30天。。\n";                
+
+              break;                                               
+
+     case  1:                                                      
+
+     case  3:                                                      
+
+     case  5:                                                      
+
+     case  7:                                                      
+
+     case  8:                                                      
+
+     case 10:                                                      
+
+     case 12: cout << month << "月是31天。\n";                
+
+              break;   
+     default: cout << month << "月，沒有這個月份。\n";    // 新增  
+
+     break;         // 新增  
+                                            
+
+    }                                                              
+
+                                                                   
+
+    return (0);                                                    
+
+}                                                                  

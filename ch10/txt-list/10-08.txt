@@ -1,0 +1,54 @@
+ /*                                                                          
+
+     複製字串 (指標版)                                        
+
+ */                                                                          
+
+                                                
+
+ #include    <iostream.h>            
+
+                                     
+
+ //--- 將字串s複製 到d ---//                                    
+
+ char* strcopy(char* d, const char* s)                                       
+
+ {
+
+     char* t = d;                                                            
+
+     while (*d++ = *s++)                                                     
+
+         ;                                                                   
+
+     return (t);                                                             
+
+ }                                                                           
+
+                                                                             
+
+ int main(void)                                                              
+
+ {
+
+     char    x[100];                                                         
+
+     char    y[100] = "ABCD";                                                
+
+                                                                             
+
+     cout << "請輸入字串x：";                                   
+
+     cin >> x;                                                               
+
+                                                                             
+
+     cout << "字串y是" << strcopy(y, x)<< "。\n";                    
+
+                                                                             
+
+     return (0);                                                             
+
+ }                                                                           
+

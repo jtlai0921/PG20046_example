@@ -1,0 +1,51 @@
+List 8-6
+ /*                                           
+
+    位址運算子和間接運算子               
+
+ */                                           
+
+                                              
+
+ #include    <iostream.h>                     
+
+                                              
+
+ int main(void)                                
+
+ {                                            
+
+     int     x   = 100;                         
+
+     int     y   = 200;                          
+
+     int*    ptr =  &x;      // ptr指向x   
+
+                                                
+
+     cout << "x：" << x << " (&x：" << &x << "號)\n";
+     cout << "y：" << y << " (&y：" << &y << "號)\n\n"; 
+
+     cout << "ptr ← &x\n";                        
+
+     cout << "ptr ：" <<  ptr << "號\n";         
+
+     cout << "*ptr：" << *ptr << "\n\n";           
+
+                                                   
+
+     ptr = &y;               // ptr指向x     
+
+                                                   
+
+     cout << "ptr ← &y\n";                        
+
+     cout << "ptr ：" <<  ptr << "號\n";         
+
+     cout << "*ptr：" << *ptr << '\n';             
+
+                                                   
+
+     return (0);                                   
+
+ }                                                 

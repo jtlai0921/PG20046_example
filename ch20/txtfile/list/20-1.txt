@@ -1,0 +1,43 @@
+ /*                                                                           
+
+    從陣列中逐次搜尋                                                   
+
+ */                                                                           
+
+                                                                              
+
+ #include    <iostream.h>                      
+
+ int main(void)                                                               
+
+ {
+
+     int found = 0;                                                           
+
+     int x[] = {1, 6, 3, 4, 2, 9, 0, 8};                                      
+
+                                                                              
+
+     while (found < 8) {
+
+         if (x[found] == 6) break;                                            
+
+         found++;                                                             
+
+     }                                                                        
+
+                                                                              
+
+     if (found == 8)                                                          
+
+         cout << "找不到6。\n";                               
+
+     else                                                                     
+
+         cout << "6在第" << i + 1 << "個位置上。\n";                      
+
+          
+
+     return (0);                                                              
+
+ }                                                                            

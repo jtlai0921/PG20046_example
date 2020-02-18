@@ -1,0 +1,55 @@
+ /*                                                                               
+
+     調查字串的長度                                                     
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                  
+
+                                   
+
+ //--- 傳回字串str的長度 ---//  
+
+ int strlength(char str[])                                                        
+
+ {
+
+     int len = 0;                                                                 
+
+                                                                                  
+
+     while (str[len])                                                             
+
+         len++;                                                                   
+
+     return (len);                                                                
+
+ }                                                                                
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     char    x[100];                                                              
+
+                                                                                  
+
+     cout << "請輸入字串：";                                          
+
+     cin >> x;                                                                    
+
+                                                                                  
+
+     cout << "字串" << x << "的長度：" << strlength(x) << '\n';                 
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                     
+
+           

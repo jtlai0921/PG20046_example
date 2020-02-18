@@ -1,0 +1,28 @@
+ /*                                                                            
+
+     字元陣列的初始化                                                         
+
+ */                                                                            
+
+                                                                               
+
+ #include    <iostream.h>                      
+                                               
+
+ int main(void)                                                                
+
+ {
+
+     char str[4] = "ABC";                                // 初始化             
+
+                                                                               
+
+     cout << "字串str是" <<str<<" 。\n";         // 表示              
+
+                                                                               
+
+     return (0);                                                               
+
+ }                                                                     
+        
+

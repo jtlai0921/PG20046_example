@@ -1,0 +1,91 @@
+ //---------------------------------------------------------------------// 
+
+ // 日期類別Date以及Gdate（介面部分）   "date.h"          // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                 
+
+ #include    <iostream.h>                                                         
+                                                                                 
+
+ //=====日期類別=====//                                                       
+
+ class Date {
+
+  
+
+ protected:                                                                       
+
+     int     year;       // 西元年                                                
+
+     int     month;      // 月                                                    
+
+     int     day;        // 日                                                    
+
+                                                                                  
+
+ public:                                                                          
+
+     Date(void);                             //預設建構元
+
+     Date(int y, int m = 1, int d = 1);      // 建構元                    
+
+                                                                                  
+
+     int Year(void)  { return (year); }      // 傳回年                     
+
+     int Month(void) { return (month); }     // 傳回月                     
+
+     int Day(void)   { return (day); }       // 傳回日                      
+
+ };                                                                               
+
+                                                                                  
+
+ ostream& operator<<(ostream& s, const Date& x);       // 插入運算子              
+
+                                                                                  
+
+ //===== 年號版日期類別 =====//                                                 
+
+ class Gdate : public Date { 
+
+                                                                                  
+
+ public:                                                                          
+
+     enum Geng {Meiji, Taisho, Showa, Heisei};                                    
+
+                                                                                  
+
+     Gdate(void) { }                                                              
+
+                                                                                  
+
+     Gdate(int y) : Date(y) { }                                                   
+
+                                                                                  
+
+     Gdate(Geng g, int y, int m = 1, int d = 1) : Date(y, m, d)                   
+
+     {
+
+         switch (g) { 
+
+          case Meiji  : year += 1867;  break;                                     
+
+          case Taisho : year += 1911;  break;                                     
+
+          case Showa  : year += 1925;  break;                                     
+
+          case Heisei : year += 1988;  break;                                     
+
+         }                                                                        
+
+     }                                                                            
+
+ };                                                                               
+                                                                               
+
+ ostream& operator<<(ostream& s, const Gdate& x);      // 插入運算子              

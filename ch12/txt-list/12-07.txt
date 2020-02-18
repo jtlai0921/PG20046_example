@@ -1,0 +1,40 @@
+ /*                                                                           
+
+     §È¥¡√˛ßODate≤ƒ2™©  ¢w®œ•ŒπÍ®“¢wó· Å|                                      
+
+ */                                                                           
+
+                                                                              
+
+ #include    <iostream.h>               
+
+ #include    "date.h"                    
+
+                                        
+
+ int main(void)                          
+
+ {                                       
+
+     Date MyBirthday( 1963, 11, 18);      
+     Date UnivTaipei(1995,  8, 23);  
+
+     Date Day[3];                        //∞}¶C îzóÒ                              
+
+                                                                              
+
+     cout << "MyBirthday = "  << MyBirthday  << '\n';                         
+
+     cout << "UnivTaipei = " << UnivTaipei << '\n';                         
+
+                                                                              
+
+     for (int i = 0; i < 3; i++)                                              
+
+         cout << "Day[" << i << "] = " << Day[i] << '\n';                     
+
+                                                                              
+
+     return (0);                                                              
+
+ }                                                                           

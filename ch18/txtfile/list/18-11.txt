@@ -1,0 +1,31 @@
+                                                            
+
+                                                                               
+
+ #include    <iostream.h>                           
+
+ #include    "acastrng.h"                          
+
+ int main(void)                                     
+
+ {                                                 
+
+     AcAstring   name;           // string結合陣列
+
+                                                                               
+
+     name["王"] = "小博";                                              
+
+     name["林"] = name["張"] = "小碩";                             
+
+     name["李"] = name["陳"] = "小真";                                 
+
+                                                                               
+
+     name.Put();                                                               
+
+                                                                               
+
+     return (0);                                                               
+
+ }                                                                             

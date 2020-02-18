@@ -1,0 +1,51 @@
+ //---------------------------------------------------------------------// 
+
+ // 挡皚ノ2场狵稦竊翴摸  BinNodeざ场だ乯"binnode.h"      // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                               
+
+ //===== 挡皚ノ2场狵稦竊翴摸=====/                                  
+
+ class BinNode {
+
+                                                                               
+
+     friend BinNode** Search(BinNode**, char*);                                
+
+                                                                               
+
+ private:                                                                      
+
+     char*       key;                //龄乕                                   
+
+     BinNode*    left;               //オ娩夹
+
+     BinNode*    right;              //娩夹
+
+                                                                               
+
+ public:                                                                       
+
+     BinNode(char*);                                                           
+
+     ~BinNode(void);                                                           
+
+                                                                               
+
+     const char* Key(void)       { return (key); }                             
+
+     BinNode* Left(void)         { return (left); }                            
+
+     BinNode* Right(void)        { return (right); }                           
+
+                                                                               
+
+     virtual void PutNode(void) = 0;     //店览ㄧ计
+
+                                                                               
+
+     void Put(void);                     //ㄌ块场だ狵稦场竊翴
+
+ };                                                                            

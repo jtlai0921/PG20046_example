@@ -1,0 +1,51 @@
+List3-13 
+ /*                                          
+
+     ノ瓜ボ块瞷计Ω计      
+
+ */                                          
+
+                                             
+
+ #include    <iostream.h>
+
+
+ int main(void)
+
+ {
+
+     char    c;
+
+     int     cnt[10] = {0};                  
+
+                                             
+
+     while (cin.get(c)) {                     
+
+         if (c >= '0' && c <= '9')             
+
+             cnt[c - '0']++;                  
+
+     }                                       
+
+                                             
+
+     cout << "计瞷Ω计\n";            
+
+     for (int i = 0; i < 10; i++) {              
+
+         cout << i << " : ";                 
+
+         for (int j = 0; j < cnt[i]; j++)    
+
+             cout << '*';                    
+
+         cout << '\n';                       
+
+     }                                       
+
+                                             
+
+     return (0);                             
+
+ }                                           

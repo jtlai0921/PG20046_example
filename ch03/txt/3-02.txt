@@ -1,0 +1,58 @@
+list3-2
+ /*                                  
+
+    將輸入拷貝到輸出（C語言）
+
+ */               
+
+                                     
+
+ #include    <stdio.h>               
+
+                                     
+
+ int main(void)                      
+
+ {                                   
+
+     int     c;                      
+
+                                     
+
+     while ((c = getchar()) != EOF)    
+
+         putchar(c);                 
+
+                                     
+
+     return (0);                      
+
+ }                                   
+
+ 
+    Ｃ++    
+
+                         
+
+ #include    <iostream.h>
+
+                         
+
+ int main(void)          
+
+ {                       
+
+     char    c;          
+
+                         
+
+     while (cin.get(c))  
+
+         cout << c;      
+
+                         
+
+     return (0);         
+
+ }                       
+                                    

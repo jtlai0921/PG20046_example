@@ -1,0 +1,70 @@
+List 5-2
+/*                                                           
+   求出各組代表選手的平均身高（函數版）             
+
+*/                                                           
+                                                             
+
+ #include    <iostream.h>                                     
+                                                              
+
+ //───傳回a, b, c的最大值───//                         
+
+ int maxof(int a, int b, int c)                               
+
+ {                                                            
+
+     int max = a;                                             
+
+     if (b > max) max = b;                                    
+
+     if (c > max) max = c;                                    
+
+     return (max);                                            
+
+ }                                                            
+
+                                                              
+
+ int main(void)                                               
+
+{ 
+
+     int height[9];          // 9個人的身高
+                                                             
+
+     // 讀取身高                                       
+
+     cout << "輸入9個人的身高：\n";                      
+
+     for (int i = 0; i < 9; i++) {
+
+         cout << i+1 << "號:";                              
+
+         cin >> height[i];                                    
+
+     }                                                        
+
+                                                              
+
+     // 求各組代表選手的身高                    
+
+     int max1 = maxof(height[0], height[1], height[2]);       
+
+     int max2 = maxof(height[3], height[4], height[5]);       
+
+     int max3 = maxof(height[6], height[7], height[8]);       
+
+                                                              
+
+     // 求出各組代表選手的平均身高                   
+
+     double ave = double(max1 + max2 + max3) / 3;             
+
+     cout << "代表選手的平均身高：" << ave << "cm\n";         
+
+                                                              
+
+     return (0);                                              
+
+ }                                                            

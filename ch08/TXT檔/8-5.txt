@@ -1,0 +1,33 @@
+List 8-5
+ /*                                         
+
+    表示物件的位址
+
+ */                                         
+
+                                            
+
+ #include    <iostream.h>                   
+
+                                            
+
+ int main(void)                             
+
+ {
+
+     int     x;                             
+
+     double  a;                             
+
+                                            
+
+     cout << "x的位址：" << &x << '\n';
+
+     cout << "y的位址：" << &a << '\n';
+
+                                            
+
+     return (0);                            
+
+ }                                        
+

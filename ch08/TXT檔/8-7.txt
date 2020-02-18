@@ -1,0 +1,41 @@
+List 8-7
+ /*                                                
+
+    位址運算子和間接運算子                    
+
+ */                                                
+
+                                                   
+
+ #include    <iostream.h>                          
+
+                                                   
+
+ int main(void)                                     
+
+ {
+
+     int     x   = 100;                            
+
+     int*    ptr =  &x;                            
+
+                                                   
+
+     cout << "指定前的x：" << x << '\n';          
+
+                                                   
+
+     *ptr = 200;                                   
+
+                                                   
+
+     cout << "指定後的x：" << x << '\n';          
+
+                                                   
+
+     return (0);                                   
+
+ }                                                 
+
+
+

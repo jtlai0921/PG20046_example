@@ -1,0 +1,40 @@
+/*
+    動態地生成整數物件
+*/
+
+#include <new.h>
+#include <isotream.h>
+
+int main(void)
+{
+    int   asize;
+    int   i;
+    int   a;
+
+    cout << "請輸入生成的陣列的元素數：";
+    cin >> asize;
+ 
+    
+    set_new_handler(0);
+     
+    a = new int[asize];
+
+    if (a == NULL){
+          cout <<"因為無法確保記憶體，所以結束程式。\n";
+    return(1);                        //異常終了
+}
+
+    for (i=0; i < asize; i++)
+        a[i] = i;
+        
+
+    for (i=0; i < asize; i++)
+        cout << " a[" << i << "] = "<< a[i] << '\n'; 
+
+    delete[] a;          
+
+    return(0);                        //正常結束
+
+}
+
+    

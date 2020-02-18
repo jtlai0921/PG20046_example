@@ -1,0 +1,82 @@
+ /*                                                                               
+
+    從陣列中逐次搜尋（形成函數版）                                       
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ /*--- 從元素數為n的整數陣列x搜尋k ---*/                                   
+
+ template <class Type> search(Type x[], int n, Type k)                            
+
+ { 
+
+     int found = 0;                       
+
+     while (found < n) {                   
+
+         if (x[found] == k) break;        
+
+         found++;                                                                 
+
+     }                                                                            
+
+     return (found);                                                              
+
+ }                                                                                
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     int     x[] = {1, 6, 3, 4, 2, 9, 0, 8};                                      
+
+     int     nx = sizeof(x) / sizeof(x[0]);                                       
+
+                                                                                  
+
+     double  y[] = {1.5, 3.2, 6.8, 4.4, 0.9};                                     
+
+     int     ny = sizeof(y) / sizeof(y[0]);                                       
+
+                                                                                  
+
+     int pos = search(x, nx, 6);                                                  
+
+                                                                                  
+
+     if (pos == nx)                                                               
+
+         cout << "找不到6。\n";                                  
+
+     else                                                                         
+
+         cout << "6在第" << pos + 1 << "個位置。\n";                       
+
+                                                                                  
+
+     pos = search(y, ny, 5.5);                                                    
+
+                                                                                  
+
+     if (pos == ny)                                                               
+
+         cout << "找不到5.5。\n";                                
+
+     else                                                                         
+
+         cout << "5.5在第" << pos + 1 << "個位置。\n";                     
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                
+

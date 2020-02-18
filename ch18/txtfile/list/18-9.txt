@@ -1,0 +1,61 @@
+ //--------------------------------------------------------------------// 
+
+ // °istring°jµ≤¶X∞}¶C•Œ2≥°™K∑F√˛ßO  AcAstring°]§∂≠±≥°§¿°^Åj acastrng.h // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                            
+
+ #include    <string>                                                       
+
+ #include    <iostream.h>                                                   
+
+                                                                            
+
+ #include    "binnode.h"                                                    
+
+                                                                            
+
+ //=====°istring°jµ≤¶X∞}¶C∏`¬I =====/                                   
+
+ class ANstring : BinNode, string {
+
+                                                                            
+
+     friend class AcAstring;                                                
+
+                                                                            
+
+ private:                                                                   
+
+     ANstring(char* kstr, char* dat) : BinNode(kstr) , string(dat) {}       
+
+     void PutNode(void) { cout<< Key()<< " "<< (string)(*this) << '\n'; }   
+
+ };                                                                         
+
+                                                                            
+
+ //===== °istring°jµ≤¶X∞}¶C =====/                                         
+
+ class AcAstring {  
+
+                                                                            
+
+ private:                                                                   
+
+     ANstring*   tree;                                                      
+
+                                                                            
+
+ public:                                                                    
+
+     AcAstring(void) { tree = NULL; }                                       
+
+     ~AcAstring(void){ if (tree != NULL) delete tree; }                     
+
+     void Put(void)  { tree->BinNode::Put(); }                              
+
+     string& operator[](char*);                                             
+
+ };                                                                         

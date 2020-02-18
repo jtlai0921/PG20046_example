@@ -1,0 +1,60 @@
+ /*                                                                              
+
+    從陣列中逐次搜尋（函數版）                                           
+
+ */                                                                              
+
+                                                                                 
+
+ #include    <iostream.h>                       
+
+ /*--- 從元素數為n的整數陣列x搜尋k ---*/                                
+
+ int search(int x[], int n, int k)                                               
+
+ {
+
+     int found = 0;                                                              
+
+     while (found < n) {
+
+         if (x[found] == k) break;                                               
+
+         found++;                                                                
+
+     }                                                                           
+
+     return (found);                                                             
+
+ }                                                                               
+
+                                                                                 
+
+ int main(void)                                                                  
+
+ {
+
+     int x[] = {1, 6, 3, 4, 2, 9, 0, 8};                                         
+
+     int n = sizeof(x) / sizeof(x[0]);                                           
+
+                                                                                 
+
+     int pos = search(x, n, 6);                                                  
+
+                                                                                 
+
+     if (pos == n)                                                               
+
+         cout << "找不到6。\n";                                 
+
+     else                                                                        
+
+         cout << "6在第" << pos + 1 << "個位置上。\n";                      
+
+                                                                                 
+
+     return (0);                                                                 
+
+ }                                                                               
+

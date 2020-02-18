@@ -1,0 +1,83 @@
+ //---------------------------------------------------------------------// 
+
+ // 堆疊類別樣板  Stack                "stack.h"         // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                
+
+ //===== 堆疊類別樣板 =====//                                     
+
+ template <class Type> class Stack {
+
+                                                                                
+
+ private:                                                                       
+
+     int     size;               // 陣列的元素數                                
+
+     Type*   ptr;                // 指向開頭元素的指標
+
+     Type*   top;                // 堆疊指標                           
+
+                                                                                
+
+     Stack(const Stack&);                //使複製建構元無效    
+
+     Stack& operator=(const Stack&);     //使指定運算子無效
+
+                                                                                
+
+ public:                                                                        
+
+     //----- 自空堆疊移除的例外-----//                         
+
+     class EmptyErr {
+
+     private:                                                                   
+
+         Stack*  ident;                                                         
+
+     public:                                                                    
+
+         EmptyErr(Stack* p) : ident(p) { }                                      
+
+         Stack* Ptr(void)  { return (ident); }                                  
+
+     };                                                                         
+
+                                                                                
+
+     Stack(int sz) { ptr = top = new Type[size = sz]; }                         
+
+     ~Stack(void)  { delete[] ptr; }                                            
+
+                                                                                
+
+     int Push(const Type &x) {        // 加入（Push）                              
+
+         if (ptr - top < size) {
+
+             *top++ = x;                                                        
+
+             return (1);                                                        
+
+         }                                                                      
+
+         return (0);                                                            
+
+     }                                                                          
+
+                                                                                
+
+     Type Pop(void) {                 // 移除（Pop）
+
+         if (top <= ptr)                                                        
+
+             throw EmptyErr(this);       // 丟出錯誤                         
+
+         return (*--top);                                                       
+
+     }                                                                          
+
+ };                                                                             

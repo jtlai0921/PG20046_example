@@ -1,0 +1,47 @@
+List 9-4
+ /*                                           
+
+     動態地生成、初始化整數物件
+
+ */                                           
+
+ #include    <iostream.h>              
+
+                                       
+
+ int main(void)                        
+
+ {                                    
+
+     int  asize;                       
+
+     int* a;                            
+
+                                        
+     cout << "請輸入元素數："; 
+
+     cin >> asize;                         
+
+                                           
+
+     a = new int[asize];                  │
+
+                                           
+     for (int i = 0; i < asize; i++)           
+
+         a[i] = i;                             
+
+                                              
+
+     for (i = 0; i < asize; i++)                
+         cout << "a[" << i << "] = " << a[i] << '\n'; 
+  
+    delete[] a;                               
+
+
+    return (0);                                                          
+
+}                                                                        
+
+
+

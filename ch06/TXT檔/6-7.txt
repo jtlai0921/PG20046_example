@@ -1,0 +1,70 @@
+List 6-7
+ /*                                                                          
+     パ逼传俱计 (ぃㄒ)                               
+
+ */                                                                           
+
+ #include <iostream.h>                                                        
+
+ int a;                                                                       
+
+ int b;                                                                       
+
+ int c;                                                                       
+
+                                                                              
+
+ //--- 传ㄢま计 ---//                                           
+
+ void swap(int& x, int& y)                                                    
+
+ 
+                                                                          
+
+     int temp = x;                                                            
+
+     x = y;                                                                   
+
+     y = temp;                                                                
+
+ }                                                                            
+                                                                             
+
+ //--- パ逼传ま计 a, b, c ---//                               
+
+ void sort(void)                                                              
+                                                                        
+
+     if (a > b) swap(a, b);                                                   
+
+     if (b > c) swap(b, c);                                                   
+
+     if (a > b) swap(a, b);                                                   
+
+ }                                                                            
+                                                                             
+
+ int main(void)                                                               
+                                                                         
+
+     cout << "叫块俱计 [1]";  cin >> a;                         
+
+     cout << "叫块俱计 [2]";  cin >> b;                         
+
+     cout << "叫块俱计 [3]";  cin >> c;                         
+
+                                                                              
+     sort();                                                                  
+                                                                            
+
+     cout << "程琌?" << a << "\n";                                   
+
+     cout << "程琌" << b << "\n";                                   
+
+     cout << "程琌" << c << "\n";                                   
+
+                                                                           
+
+     return (0);                                                              
+
+ }                                                                            

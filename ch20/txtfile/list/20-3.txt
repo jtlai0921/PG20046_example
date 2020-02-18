@@ -1,0 +1,101 @@
+ /*                                                                             
+
+    眖皚い硋Ω穓碝ㄧ计                                          
+
+ */                                                                             
+
+                                                                                
+
+ #include    <iostream.h>                
+
+ /*--- 眖じ计n俱计皚x穓碝k ---*/     
+
+ int int_search(int x[], int n, int k)                                          
+
+ {
+
+     int found = 0;                                                             
+
+     while (found < n) { 
+
+         if (x[found] == k) break;                                              
+
+         found++;                                                               
+
+     }                                                                          
+
+     return (found);                                                            
+
+ }                                                                              
+
+                                                                                
+
+ /*--- 眖じ计n龟计皚x穓碝k ---*/                                 
+
+ int dbl_search(double x[], int n, double k)                                    
+
+ {
+
+     int found = 0;                                                             
+
+     while (found < n) { 
+
+         if (x[found] == k) break;                                              
+
+         found++;                                                               
+
+     }                                                                          
+
+     return (found);                                                            
+
+ }                                                                              
+
+                                                                                
+
+ int main(void)                                                                 
+
+ {
+
+     int x[] = {1, 6, 3, 4, 2, 9, 0, 8};                                        
+
+     int nx = sizeof(x) / sizeof(x[0]);                                         
+
+                                                                                
+
+     int y[] = {1.5, 3.2, 6.8, 4.4, 0.9};                                       
+
+     int ny = sizeof(y) / sizeof(y[0]);                                         
+
+                                                                                
+
+     int pos = int_search(x, nx, 6);                                            
+
+                                                                                
+
+     if (pos == nx)                                                             
+
+         cout << "тぃ6\n";                                 
+
+     else                                                                       
+
+         cout << "6材" << pos + 1 << "竚\n";                      
+
+                                                                                
+
+     pos = dbl_search(y, ny, 5.5);                                              
+
+                                                                                
+
+     if (pos == ny)                                                             
+
+         cout << "тぃ5.5\n";                               
+
+     else                                                                       
+
+         cout << "5.5材" << pos + 1 << "竚\n";                    
+
+                                                                                
+
+     return (0);                                                                
+
+ }                                                                              

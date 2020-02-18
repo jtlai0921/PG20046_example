@@ -1,0 +1,88 @@
+List5-6
+
+ /*                               
+
+     パ逼ユ传把计 
+
+ */                               
+
+
+ #include     <iostream.h>        
+
+
+ //--- ユ传把计x, yぇ ---//
+
+ void swap(int& x, int& y)         
+
+ {                                
+
+     int temp = x;                  
+
+     x = y;                        
+
+     y = temp;                     
+
+ }                                
+
+                                  
+
+ //--- パ逼ユ传把计 ---//           
+
+ void sort(int& a, int& b, int& c)                        
+ {
+                                                          
+
+     if (a > b) swap(a, b);                               
+
+     if (b > c) swap(b, c);                               
+
+     if (a > b) swap(a, b);                               
+
+ }                                                        
+
+                                                          
+
+ int main(void)                                           
+ {   
+                                                          
+
+     int a, b, c;                                         
+
+                                                          
+
+     cout << "叫块俱计aぇ";              
+
+     cin >> a;                                            
+
+                                                          
+
+     cout << "叫块俱计bぇ";              
+
+     cin >> b;                                            
+
+                                                          
+
+     cout << "叫块俱计cぇ";              
+
+     cin >> c;                                            
+
+                                                          
+
+     sort(a, b, c);                                       
+
+                                                          
+
+     cout << "竒パ逼ユ传把计\n";    
+
+     cout << "aぇ" << a << "\n";               
+
+     cout << "bぇ" << b << "\n";               
+
+     cout << "cぇ" << c << "\n";               
+
+                                                          
+
+     return (0);                                          
+
+ }                                                        
+

@@ -1,0 +1,72 @@
+List 5-1
+ /*                                     
+
+    求各組代表選手的平均身高。
+
+ */                                     
+
+                                        
+
+ #include    <iostream.h>               
+
+                                        
+ │
+ int main(void)                         
+
+ {                                      
+
+     int height[9];     // 9人的身高
+
+                                        
+
+     // 讀取身高                
+
+     cout << "輸入9個人的身高：\n";  
+
+     for (int i = 0; i < 9; i++) {          
+
+         cout << i+1 << "號:";         
+
+         cin >> height[i];              
+
+     }                                  
+
+                                        
+
+     // 求各組代表選手的身高         
+
+     int max1 = height[0];                         
+
+     if (height[1] > max1) max1 = height[1];       
+
+     if (height[2] > max1) max1 = height[2];       
+
+                                                   
+
+     int max2 = height[3];                         
+
+     if (height[4] > max2) max2 = height[4];       
+
+     if (height[5] > max2) max2 = height[5];       
+
+                                                   
+
+     int max3 = height[6];                         
+
+     if (height[7] > max3) max3 = height[7];       
+
+     if (height[8] > max3) max3 = height[8];       
+
+                                                   
+
+     // 求各組代表選手的身高       
+
+     double ave = double(max1 + max2 + max3) / 3;  
+
+     cout << "代表選手的平均身高：" << ave << "cm\n
+
+                                                   
+
+     return (0);                                   
+
+ }                                                 

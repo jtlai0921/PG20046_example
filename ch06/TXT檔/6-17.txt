@@ -1,0 +1,58 @@
+List 6-17	
+ /*                                
+
+     猜數字遊戲  (成員部分) "main.c"
+
+ */                                
+
+  
+ #include  <iostream.h>  
+
+ #include    "kazu.h"    
+
+ int main(void)                                                 
+
+{
+
+    cout << "請猜" << max_no << "0~9的數字!!\a\n\n";  
+
+                                                               
+
+     do {                                 
+
+         int  hantei;                     
+
+         start();                         
+
+         do {                             
+
+             hantei = judge(input());      
+
+             if (hantei > 0)               
+                 cout << "答案較大。\n";
+
+             else if (hantei < 0)
+
+                 cout << "?答案較小。\n";
+
+         } while (hantei != 0);              
+
+         cout << "正確解答。\n";
+
+     } while (cont_game());                 
+                   
+
+     return (0);   
+
+ }                 
+
+ 
+
+
+
+
+
+
+                                 
+
+ 

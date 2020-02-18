@@ -1,0 +1,58 @@
+//--------------------------------------------------------------------// 
+
+//§È¥¡√˛ßODate≤ƒ2''™©°]§∂≠±≥°§¿°^ "date.h"           // 
+
+//----------------------------------------------------------------------/ 
+
+                                                                                 
+
+#if !defined(___Class_Date)                                                      
+
+    #define  ___Class_Date                                                       
+
+    Å@                                                                           
+
+#include    <iostream.h>                                                         
+
+                                                                                 
+
+//=====§È¥¡√˛ßO=====//                                                       
+
+class Date {
+
+                                                                                 
+
+private:                                                                         
+
+    int     year;       //¶Ë§∏¶~                                       
+
+    int     month;      //§Î                                                
+
+    int     day;        //§Èì˙                                                    
+
+                                                                                 
+
+public:                                                                          
+
+    Date(void);                    // πw≥]´ÿ∫c®Áº∆
+
+    Date(int y, int m = 1, int d = 1);          // ´ÿ∫c®Áº∆                
+
+                                                                                 
+
+    int Year(void)  const { return (this->year); }      //∂«¶^¶~
+
+    int Month(void) const { return (this->month); }     //∂«¶^§Îãp              
+
+    int Day(void)   const { return (this->day); }       //∂«¶^§Èãp              
+
+};                                                                               
+
+                                                                                 
+
+ostream& operator<<(ostream&, Date& x);         //¥°§JπB∫‚§l       
+
+                                                                                 
+
+#endif                                                                           
+

@@ -1,0 +1,71 @@
+ /*                                                                         
+
+    √d™´√˛ßO™∫®œ•ŒπÍ®“                                                   
+
+ */                                                                         
+
+                                                                            
+
+ #include    "pet.h"                                                        
+
+                                                                            
+
+ int main(void)                                                             
+
+ { 
+
+     const int   max = 10;       // √d™´™∫≥Ã§jº∆∂q
+
+     int     no;                 // √d™´™∫º∆∂q
+
+     Pet*    MyPet[max];         // ´¸¶V√d™´§ß´¸º–™∫∞}¶C
+
+                                                                            
+
+     cout << "√d™´¶≥¶h§÷∞¶°H ( 1 .. " << max << " ) : ";              
+
+     do {
+
+         cin >> no;                                                         
+
+     } while (no < 1 || no > max);                   // 1*Ömax**10Å@Å@     
+
+                                                                            
+
+     for (int i = 0; i < no; i++) {                  // øÈ§J∏ÍÆ∆ì¸óÕ          
+
+         cout << i + 1 << "Ω–øÈ§J≤ƒi+1∞¶™∫∏ÍÆ∆\n";                     
+
+         MyPet[i] = new Pet();                                              
+
+         MyPet[i]->Input();                                                 
+
+     }                                                                      
+
+                                                                            
+
+     cout << "\nß⁄™∫√d™´§ß§@ƒ˝™Ì\n";             //§@ƒ˝™Ì           
+
+     for (i = 0; i < no; i++)                                               
+
+         cout << *MyPet[i] << '\n';                                         
+
+                                                                            
+
+     cout << "\n≈˝®C∞¶√d™´¶€ß⁄§∂≤–°C\n";     // ¶€ß⁄§∂≤–      
+
+     for (i = 0; i < no; i++)                                               
+
+         MyPet[i]->Sintro();                                                
+
+                                                                            
+
+     for (i = 0; i < no; i++)                                               
+
+         delete MyPet[i];                                                   
+
+                                                                            
+
+     return (0);                                                            
+
+ }                                                                          

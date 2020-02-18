@@ -1,0 +1,64 @@
+ /*                                                                               
+
+    單純化的銀行帳戶（函數版）                                            
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                
+
+                                         
+
+ //--- 將錢存入帳戶內---//         
+
+ void save(long* savings, long amount)                                            
+
+ {
+
+     *money += amount;                                                           
+
+ }                                                                                
+
+                                                                                  
+
+ //--- 自帳戶提款 ---//                                               
+
+ void withdraw(long* savings, long amount)                                            
+
+ {
+
+     *savings -= amount;                                                           
+
+ }                                                                                
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     long my_account = 0;                      // 我的銀行帳戶之存款額              
+
+     long drmaster = 0;                        // 小博的銀行帳戶之存款額          
+
+                                                                                  
+
+     save(&my_account, 100);                  // 我存入100元                  
+
+     withdraw(&my_account,  50);              // 我提款50元                  
+
+                                                                                  
+
+     save(&drmaster, 100);                    // 小博存入100元              
+                                                                                  
+
+     cout << "我的帳戶之存款額＝"     << my_account << "元\n";                      
+
+     cout << "小博的帳戶之存款額＝" << drmaster   << "元\n";                      
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                

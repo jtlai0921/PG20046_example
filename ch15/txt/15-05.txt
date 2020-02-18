@@ -1,0 +1,81 @@
+ /*                                                                               
+
+    堆疊類別樣板Stack ─使用實例─                              
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <string.h>         
+
+ #include    <iostream.h>         
+
+                                  
+
+ #include    "stack.h"                                                            
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     char    x[256];                                                              
+
+                                                                                  
+
+     cout << "請輸入字串 : ";                                         
+
+     cin >> x;                                                                    
+
+                                                                                  
+
+     Stack<char> sc(strlen(x));                                                   
+
+                                                                                  
+
+     for (int i = 0; x[i] != '\0'; i++)                                           
+
+         sc.Push(x[i]);                                                           
+
+                                                                                  
+
+     try {
+
+         for (i = 0; i < strlen(x); i++)  {
+
+             char c = sc.Pop();                                                   
+
+             cout << c;                                                           
+
+         }                                                                        
+
+         cout << '\n';                                                            
+
+     }                                                                            
+
+     catch (Stack<char>::EmptyErr x) {
+
+         cout << "\n空的<char>堆疊["  << x.Ptr()                             
+
+              << "]中試圖進行移除。\n";                               
+
+     }                                                                            
+
+                                                                                  
+
+ //  Stack<char> a(sc);              // 編譯錯誤                       
+
+                                                                                  
+
+     Stack<char> b(100);                                                          
+
+ //  b = sc;                         // 編譯錯誤                        
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                
+
+

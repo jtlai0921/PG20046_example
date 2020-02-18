@@ -1,0 +1,99 @@
+ //---------------------------------------------------------------------// 
+
+ //  狡计摸Complexざ场だ          "complex.h"       // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                               
+
+ #include    <iostream.h>                                                      
+
+                                                                               
+
+ class Complex {
+
+                                                                               
+
+ private:                                                                      
+
+     double  re;         //龟计场だ                                            
+
+     double  im;         //店计场だ                                           
+
+                                                                               
+
+ public:                                                                       
+
+     Complex(double r = 0, double i = 0) { re = r; im = i; } //篶ㄧ计
+
+                                                                               
+
+     friend double Real(const Complex& x) { return (x.re); }  // 肚龟计场だ    
+
+     friend double Imag(const Complex& x) { return (x.im); }  //肚店计场だ
+
+                                                                               
+
+     Complex operator+(void) { return (*this); }            // じ+笲衡  
+
+     Complex operator-(void) { return (Complex(-re, -im)); }// じ-笲衡 
+
+                                                                               
+
+     Complex& operator+=(Complex& x) {                        // ∠∽笲衡    
+
+         re += x.re;                                                           
+
+         im += x.im;                                                           
+
+         return (*this);                                                       
+
+     }                                                                         
+
+                                                                               
+
+     Complex& operator-=(Complex& x) {                   // ⌒∽笲衡    
+
+         re -= x.re;                                                           
+
+         im -= x.im;                                                           
+
+         return (*this);                                                       
+
+     }                                                                         
+
+                                                                               
+
+     friend Complex operator+(const Complex& x, const Complex& y) {
+
+         return (Complex(x.re + y.re,  x.im + y.im));                          
+
+     }                                                                         
+
+                                                                               
+
+     friend Complex operator+(const double x, const Complex& y) {
+
+         return (Complex(x + y.re, y.im));                                     
+
+     }                                                                         
+
+                                                                               
+
+     friend Complex operator+(const Complex& x, const double y) { 
+
+         return (Complex(x.re + y, x.im));                                     
+
+     }                                                                         
+
+ };                                                                            
+
+                                                                               
+
+ inline ostream& operator<<(ostream& s, Complex& x)                            
+
+ {
+
+     return (s << '(' << x.Real() << ',' << x.Imag() << ')');                  
+
+ }                                                                             

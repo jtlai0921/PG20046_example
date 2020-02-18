@@ -1,0 +1,105 @@
+ //---------------------------------------------------------------------// 
+
+ //  抽象表類別Table        "table.h"                                          // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                
+
+ // "邏輯"型態                                                               
+
+ enum Boolean {
+
+     FALSE,          // 偽                                                      
+
+     TRUE,           // 真                                                      
+
+ };                                                                             
+
+                                                                                
+
+ 
+//----------------------------------------------------------------------//
+
+//   表抽象類別                                                      
+
+ 
+------------------------------------------------------------------------// 
+
+ template <class T>                                                             
+
+ class Table { 
+
+ public:                                                                        
+
+     Table(void) { }                         //形成表                       
+
+     Boolean Search(T x);                    // 搜尋與x相等的元素             
+
+     virtual void SearchFirst(void)  = 0;    // 著眼於開頭元素                
+
+     virtual void SearchNext(void)   = 0;    // 著眼於下個元素                  
+
+     virtual Boolean Found(T x)      = 0;    // 著眼元素與x相等
+
+     virtual Boolean Exhausted(void) = 0;    // 閱讀完所有的表                
+
+ };                                                                             
+
+                                                                                
+
+ /*--- 搜尋與x相等的元素 ---*/                                                
+
+ template <class T>                                                             
+
+ Boolean Table<T>::Search(T x)                                                  
+
+ {
+
+     SearchFirst();                                                             
+
+     while (!Exhausted() && !Found(x))                                          
+
+         SearchNext();                                                          
+
+     return (!Exhausted());                                                     
+
+ }                                                                              
+
+                                                                                
+
+ /*----------------------------------------------------------------------       
+
+      陣列版‧表類別                                                   
+
+ ----------------------------------------------------------------------*/       
+
+ template <class T>                                                             
+
+ class AryTable : public Table<T> {
+
+ private:                                                                       
+
+     T   *ptr;               // 指向開頭元素的指標                            
+
+     int size;               // 大小                                          
+
+     int cursor;             // 目前所著眼之元素的標註
+
+                                                                                
+
+ public:                                                                        
+
+     AryTable(int maxsize)   { ptr = new T[size = maxsize]; cursor = 0;}        
+
+     T& operator[](int i)    { return (ptr[i]); }                               
+
+     void SearchFirst(void)  { cursor = 0; }                                    
+
+     void SearchNext(void)   { cursor < size ? cursor++ : 0; }                  
+
+     Boolean Exhausted(void) { return (cursor == size); }                       
+
+     Boolean Found(T x)      { return (ptr[cursor] == x); }                     
+
+ };                                                                             

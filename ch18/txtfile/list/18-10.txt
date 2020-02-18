@@ -1,0 +1,27 @@
+ //---------------------------------------------------------------------// 
+
+ //  °istring°jµ≤¶X∞}¶C•Œ2≥°™K∑F√˛ßO  AcAstring°]πÍ≤{≥°§¿°^Åj    "acastrng.c"      // 
+
+ //------------------ --------------------------------------------------// 
+
+                                                                                 
+
+ #include    "acastrng.h"                                                        
+
+                                                                                 
+
+ //----- ®¨º–πB∫‚§l ----//                                                    
+
+ string& AcAstring::operator[](char* kstr)                                       
+
+ {
+
+     ANstring*& ptr = (ANstring*)*Search(&(BinNode*)tree, kstr);                 
+
+     if (ptr == NULL)                                                            
+
+         ptr = new ANstring(kstr, "");                                           
+
+     return (*ptr);                                                              
+
+ }                                                                               

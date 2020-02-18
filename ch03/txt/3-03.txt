@@ -1,0 +1,38 @@
+ List3-3
+ /*                                              
+
+    將換行字元視覺化，並將輸入拷貝到輸出
+
+*/                                              
+
+                                                
+
+#include    <iostream.h>                        
+
+                                                
+
+int main(void)                                  
+
+{                                               
+
+    char    c;                                  
+
+                                                
+
+    while (cin.get(c))                          
+
+        if (c == '\n')   // 如果是換行字元…
+
+            cout << "[RET]\n";                  
+
+        else           //如果不是…  
+
+            cout << c;                          
+
+                                                
+
+    return (0);                                 
+
+}                                               
+
+ 

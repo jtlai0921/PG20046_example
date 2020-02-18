@@ -1,0 +1,44 @@
+List 6-6
+ /*                                                   
+
+     自動儲存區間和靜態儲存區間                     
+
+ */                                                   
+
+                                                      
+
+ #include    <iostream.h>                             
+
+                                                      
+
+ void func(void)                                       
+
+ {                                                    
+
+     int         ax = 0;         // 自動儲存區間
+
+     static int  sx = 0;         // 靜態儲存區間
+
+                                                      
+
+     cout << "ax：" << ax << "  sx：" << sx << '\n';     
+
+     ax++;    sx++;                                   
+
+ }                                                    
+
+                                                      
+
+ int main(void)                                       
+
+ { 
+
+     for (int i = 0; i < 10; i++)                     
+
+         func();                                      
+
+                                                      
+
+     return (0);                                      
+
+ }                                        

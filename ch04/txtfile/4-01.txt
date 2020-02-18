@@ -1,0 +1,24 @@
+List4-1  
+
+ /*                                         
+
+     ÅT¹a                          
+
+ */                                         
+
+                                            
+
+ #include    <iostream.h>                   
+
+                                            
+
+ int main(void)                             
+
+ 
+                                            
+
+     cout << "ÅT¹a3¦¸\a\a\a\n";
+
+     return (0);                            
+
+ }                                          

@@ -1,0 +1,29 @@
+ /*                                                                        
+
+     對字串的指定 (錯誤)                                          
+
+ */                                                                        
+
+                                                                           
+
+ #include    <iostream.h>                                                  
+
+                                                                           
+
+ int main(void)                                                            
+
+ {
+
+     char s[8] = "ABCD";     // 初始化                                     
+
+                                                                           
+
+     s = "12345";            // 指定：編譯錯誤                 
+
+     cout << s << '\n';                                                    
+
+                                                                           
+
+     return (0);                                                           
+
+ }                                                                         

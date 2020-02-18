@@ -1,0 +1,52 @@
+List5-9
+ /*                                              
+
+     使用遞迴函數呼叫來求出階乘       
+
+ */                                              
+
+                                                 
+
+ #include    <iostream.h>                        
+
+                                                 
+
+ //--- 求出n的階乘 ---//                     
+
+ int factorial(int n)                            
+
+ { 
+
+     if (n != 0)                                 
+
+         return (n * factorial(n-1));            
+
+     else                                        
+
+         return (1);                             
+
+ }                                               
+
+                                                 
+
+ int main(void)                                  
+
+ {
+
+     int x;                                      
+
+                                                 
+
+     cout << "輸入整數x：";               
+
+     cin >> x;                                   
+
+                                                 
+
+     cout<< "x的階乘是" << factorial(x) <<"。";
+
+                                                 
+
+     return (0);                                 
+
+ }                                            

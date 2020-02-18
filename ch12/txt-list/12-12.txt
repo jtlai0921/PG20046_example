@@ -1,0 +1,84 @@
+/*                                                                              
+
+    使用指向成員函數的指標之動態函數呼叫                            
+
+*/                                                                              
+
+                                                                                
+
+#include    <iostream.h>                                                        
+
+                                                                                
+
+#include    "date.h"                                                            
+
+                                                                                
+
+int main(void)                                                                  
+
+{
+
+    typedef int (Date::*pcomp)(int) const;                                      
+
+    pcomp       fcomp[] = {Date::CompY, Date::CompM, Date::CompD};              
+
+    int         menu;                                                           
+
+    const Date  MyBirthday(1963, 11, 18);       // 我的生日                   
+
+                                                                                
+
+    cout << "請猜一猜我的生日。\n";                                     
+
+    do {
+        cout << "0…年  1…月  2…日  3…結束 :";                          
+
+        cin >> menu;                                                            
+
+                                                                                
+
+        if (menu >= 0 && menu <= 2) {
+
+            int value, diff;                                                    
+
+            cout << "請輸入數值";                                     
+
+            cin >> value;                                                       
+
+                                                                                
+
+            diff = (MyBirthday.*fcomp[menu])(value);                            
+
+            if (!diff)                                                          
+
+                cout << "正確答案\n";                                         
+
+            else if (diff > 0)                                                  
+
+                cout <<  diff << "只大  而已\n";                          
+
+            else                                                                
+
+                cout << -diff << "只小  而已\n";                          
+
+        }                                                                       
+
+      } while (menu != 3);       
+
+                                
+    return (0); 
+
+}                 
+
+執行實例
+請猜一猜我的生日。
+0…年  1…月  2…日  3…結束 ：0  
+請輸入數值：1964  
+只大1而已。
+0…年  1…月  2…日  3…結束 ：0  
+請輸入數值：1963  
+正確答案。
+0…年  1…月  2…日  3…結束 ：1  
+請輸入數值：11  ←
+正確答案。
+0…年  1…月  2…日  3…結束 ：3  

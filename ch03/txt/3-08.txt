@@ -1,0 +1,81 @@
+ List3-8 
+ /*                                          
+
+     璸衡块瞷计        
+
+ */                                          
+
+                                             
+
+ #include    <iostream.h>                  
+
+                                           
+
+ int main(void)                            
+
+ {                                         
+
+     char    c;                            
+
+     int  c0 = 0,c1 = 0,c2 = 0,c3 = 0, c4 = 0; 
+
+     int  c5 = 0, c6 = 0, c7 = 0, c8 = 0, c9 = 0; 
+
+                                           
+
+     while (cin.get(c)) {                   
+
+         switch (c) {                       
+
+          case '0': c0++; break;            
+
+          case '1': c1++; break;             
+
+          case '2': c2++; break;             
+
+          case '3': c3++; break;             
+
+          case '4': c4++; break;             
+
+          case '5': c5++; break;             
+
+          case '6': c6++; break;             
+
+          case '7': c7++; break;             
+
+          case '8': c8++; break;             
+
+          case '9': c9++; break;             
+
+         }                                   
+
+     }                                       
+
+     cout << "瞷Ω计" << c0 << '\n'; 
+
+     cout << "瞷Ω计" << c1 << '\n'; 
+
+     cout << "⒈瞷Ω计" << c2 << '\n'; 
+
+     cout << "⒉瞷Ω计" << c3 << '\n'; 
+
+     cout << "⒊瞷Ω计" << c4 << '\n'; 
+
+     cout << "⒋瞷Ω计" << c5 << '\n'; 
+
+     cout << "⒌瞷Ω计" << c6 << '\n'; 
+
+     cout << "⒍瞷Ω计" << c7 << '\n'; 
+
+     cout << "⒎瞷Ω计" << c8 << '\n'; 
+
+     cout << "⒏瞷Ω计" << c9 << '\n'; 
+
+                                             
+
+     return (0);                             
+
+ }
+                                           
+
+ 

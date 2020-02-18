@@ -1,0 +1,65 @@
+List 8-9
+ /*                                     
+
+     輸入更換兩個引數的值(參考版)
+
+ */                                     
+
+                                        
+
+ #include     <iostream.h>              
+
+                                        
+ //---輸入更換引數x, y的值 ---//  
+
+ void swap(int& x, int& y)              
+
+ {                                      
+
+     int temp = x;                       
+
+     x = y;                             
+
+     y = temp;                          
+
+ }                                      
+
+                                                          
+
+ int main(void)                                           
+
+ {
+
+     int a;                                               
+
+     int b;                                               
+
+                                                          
+
+     cout << "請輸入整數a的值：";              
+
+     cin >> a;                                            
+
+                                                          
+
+     cout << "請輸入整數b的值：";              
+
+     cin >> b;                                            
+
+                                                          
+
+     swap(a, b);                                          
+
+                                                          
+
+     cout << "已輸入更換a, b的值。\n";        
+
+     cout << "ａ的值是" << a << "。\n";               
+
+     cout << "ｂ的值是" << b << "。\n";               
+
+                                                          
+
+     return (0);                                          
+
+ }                                                        

@@ -1,0 +1,55 @@
+List3-12
+ /*                                                                   
+
+    輸出未達60分的學生一覽表                               
+
+ */                                                                   
+
+                                                                      
+
+ #include    <iostream.h>                                             
+
+                                                                      
+
+ int main(void)                                                       
+
+ 
+                                                                      
+
+     int     ninzu = 0;              // 未滿60分的學生人數
+
+     int     tensu[6];               //儲存分數的陣列
+
+     int     rakudai[6];             //未達60分學生的足標
+                                             
+
+     cout << "請輸入6個人的分數：\n";        
+
+     for (int i = 0; i < 6; i++) {                
+
+         cout << i + 1 << "號：";                 
+
+         cin >> tensu[i];
+
+         if (tensu[i] < 60) {
+
+             rakudai[ninzu] = i;
+
+             ninzu++;
+
+         }
+
+     }
+
+
+
+     cout << "未達60分有" << ninzu << "人。\n";
+     for (i = 0; i < ninzu; i++)                                                  
+
+         cout << rakudai[i] + 1 << "號：" << tensu[rakudai[i]] << "分\n";         
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                           

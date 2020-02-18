@@ -1,0 +1,48 @@
+List2-6
+ /*                                         
+
+     顯示輸入月分的天數          
+
+ */                                         
+
+                                            
+
+ #include    <iostream.h>                   
+
+                                            
+
+ int main(void)                              
+
+ 
+                                            
+
+     int     month;                         
+
+                                            
+
+     cout << "請輸入月份：";          
+
+     cin >> month;                          
+
+                                            
+
+     cout << month << "月是";               
+
+                                            
+
+     if (month == 2)                        
+
+         cout << "28天或是29天。\n";     
+     else if (month == 4 || month == 6 || month == 9 || month == 11)    
+
+         cout << "是30天。\n";                                        
+
+     else                                                               
+
+         cout << "是31天。\n";                                        
+
+                                                                        
+
+     return (0);                                                        
+
+ } 

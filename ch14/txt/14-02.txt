@@ -1,0 +1,45 @@
+ /*                                                                             
+
+    整數陣列類別IntAry第1版  ─使用實例─                                
+
+ */                                                                             
+
+                                                                                
+
+ #include    <iostream.h>                      
+                                               
+
+ #include    "intary.h"                        
+
+
+ int main(void)                               
+
+ {                                             
+
+     int n;                                                                                                                 
+
+     cout << "請輸入元素數：";                                              
+
+     cin >> n;                                                                  
+
+                                                                                
+
+     IntAry  x(n);                                                              
+
+                                                                                
+
+     for (int i = 0; i < n; i++)                                                
+
+         x[i] = i;                                                              
+
+                                                                                
+
+     for (i = 0; i < n; i++)                                                    
+
+         cout << "x[" << i << "] = " << x[i] << '\n';                           
+
+                                                                                
+
+     return (0);                                                                
+
+ }                                                      

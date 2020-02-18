@@ -1,0 +1,49 @@
+ /*                                                                           
+
+     字串陣列的表現實例
+
+
+ */                                                                           
+
+                                                                              
+
+ #include    <iostream.h>                           
+
+                                                     
+
+ const int   smax = 3;                                
+
+ const int   slen = 6;                                
+
+                                                      
+
+ int main(void)                                       
+ {                                                    
+
+     char    s[smax][slen] = {"Turbo", "NA", "DOHC"};  
+
+                                                      
+
+     char*   p[smax] = {"Turbo", "NA", "DOHC"};                               
+
+                                                                              
+
+     cout << "字串陣列的陣列\n";                                              
+
+     for (int i = 0; i < smax; i++)                                           
+
+         cout << s[i] << '\n';                                                
+
+                                                                              
+
+     cout << "指標的陣列\n";                                              
+
+     for (i = 0; i < smax; i++)                                               
+
+         cout << p[i] << '\n';                                                
+
+                                                                              
+
+     return (0);                                                              
+
+ }                                                                            

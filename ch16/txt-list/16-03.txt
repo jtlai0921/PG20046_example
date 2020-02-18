@@ -1,0 +1,46 @@
+ /*                                                                          
+
+ 年號版日期類別Date  ─使用實例─                                     
+
+ */                                                                          
+
+                                                                             
+
+ #include    <iostream.h>                  
+
+                                           
+ #include    "date.h"                      
+                                           
+ int main(void)  
+                         
+ {                                         
+
+     Date Date1(1860, 11, 18);                                               
+
+     Date Date2(1900, 11, 18);                                               
+
+     Date Date3(1920, 11, 18);                                               
+
+     Date Date4(1960, 11, 18);                                               
+
+     Date Date5(Date::Heisei, 2, 11, 18);                                    
+
+                                                                             
+
+     cout << "Date1 : " << Date1 << '\n';                                    
+
+     cout << "Date2 : " << Date2 << '\n';                                    
+
+     cout << "Date3 : " << Date3 << '\n';                                    
+
+     cout << "Date4 : " << Date4 << '\n';                                    
+
+     cout << "Date5 : " << Date5 << '\n';                                    
+
+                                                                             
+
+     return (0);                                                             
+
+ }    
+
+ 

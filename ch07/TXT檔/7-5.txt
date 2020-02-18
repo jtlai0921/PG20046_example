@@ -1,0 +1,106 @@
+List 7-5
+ /*                                                                               
+
+ 　　使用列舉的menu-driven的程式的雛型                               
+
+ */                                                                                                                  
+
+ #include    <iostream.h>                                                         
+
+ enum menu { Termination, Insert, Delete, Print, Invalid };                       
+
+ 
+
+ //---１ ---//                                                           
+
+ void insert(void)                                                                
+
+ { 
+
+     cout << "menu(１) <<資料追加>可被選擇。\n";                       
+
+ }                                                                                
+                                                                                 
+
+ //---  menu 2 ---//                                                           
+
+ void delete(void)                                                                
+
+ {
+
+     cout << "menu(２) <資料刪除>可被選擇。\n";                       
+
+ }                                                                                
+
+                                                                                  
+
+ //---menu３ ---//                                                           
+
+ void print(void)                                                                 
+
+ {
+
+     cout << "menu(３) <<資料表示>可被選擇。\n";                       
+
+ }                                                                                
+
+                                                                                  
+
+ //---menu選擇 ---//                                                         
+
+ menu SelectMenu(void)                                                            
+
+ {
+
+     int     ch;                                                                  
+
+                                                                                  
+
+     do { 
+
+         cout << "(０)處理終了\n";                                               
+
+         cout << "(１) 資料追加\n";                                             
+
+         cout << "(２) 資料刪除\n";                                             
+
+         cout << "(３) 資料表示\n";                                             
+
+         cin >> ch;                                                               
+
+     } while (ch < Termination || ch >= Invalid);                                 
+
+     return (menu(ch));         //int型態ch的值投入menu型態傳回
+
+ }                                                                                
+
+  //---main---//                                                     
+
+ int main(void)                                                         
+
+ {
+
+     menu    menu;                                                      
+
+                                                                        
+
+     do {
+
+         switch (menu = SelectMenu()) {
+
+          case Insert: insert(); break;      // 追加處理
+
+          case Delete: delete(); break;      // 刪除處理                
+
+          case Print : print();  break;      // 表示處理                
+
+         }                                                              
+
+     } while (menu != Termination);                                     
+
+                                                                        
+
+     return (0);                                                        
+
+ }                                                                      
+                                                                                 

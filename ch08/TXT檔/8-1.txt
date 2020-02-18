@@ -1,0 +1,35 @@
+List 8-1
+ /*                                          
+
+     嘗試將被輸入的數值除以3。 (if敘述)  
+
+ */                                          
+
+                                             
+
+ #include    <iostream.h>                 
+
+                                          
+
+ int main(void)                             
+
+ {
+
+     int     x;                            
+
+                                          
+
+     cout << "輸入整數值x：";         
+
+     cin >> x;                               
+
+                                             
+     if (x % 3)                                
+
+         cout << "x無法被3除盡。。\n"; 
+
+                                               
+
+     return (0);                               
+
+ }                                             

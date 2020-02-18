@@ -1,0 +1,57 @@
+  //--------------------------------------------------------------------// 
+
+// Ãdª«Ãþ§O(¤¶­±³¡¤À)                           "pet.h"           // 
+
+//---------------------------------------------------------------------// 
+
+                                                                               
+
+#include    <iostream.h>                                                       
+
+                                                                               
+
+//===== Ãdª«Ãþ§O=====//                                                   
+
+class Pet {
+
+                                                                               
+
+public:                                                                        
+
+    typedef char    PetName[20];                                               
+
+    enum PetType {Dog, Cat, Monkey};                                           
+
+                                                                               
+
+private:                                                                       
+
+    PetType kind;                           // «~ºØ                         
+
+    PetName name;                           // ¦W¦r
+                         
+
+                                                                               
+
+public:                                                                        
+
+    Pet(PetType x = Dog, char* n = "");     // «Øºc¨ç¼Æ
+                                                                               
+
+    PetType Type(void) { return (kind); }   //¶Ç¦^«~ºØ
+
+
+    char*   Name(void) { return (name); }   // ¶Ç¦^¦W¦r‚é                  
+
+                                                                               
+
+    void Input(void);                       // ¿é¤J                     
+
+    void Sintro(void);                      // ¦Û§Ú¤¶²Ð                  
+
+};                                                                             
+
+                                                                               
+
+ostream& operator<<(ostream&, const Pet&);  // ´¡¤J¹Bºâ¤l
+     

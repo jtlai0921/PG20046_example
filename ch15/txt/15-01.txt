@@ -1,0 +1,72 @@
+//--------------------------------------------------------------------// 
+
+//  陣列類別樣板  Ary（介面部分）　  "tary.h"          // 
+
+//--------------------------------------------------------------------// 
+
+                                                                             
+
+//===== 陣列類別模版 =====//                                       
+
+template <class Type> class Ary {
+
+                                                                             
+
+private:                                                                     
+
+    int     size;               // 陣列的元素數                              
+
+    Type*   ptr;                // 指向開頭元素的指標
+
+                                                                             
+
+public:                                                                      
+
+    //-----足標範圍錯誤 -----//                                         
+
+    class RangeErr { 
+
+    private:                                                                 
+
+        Ary*    ident;                                                       
+
+        int     index;                                                       
+
+    public:                                                                  
+
+        RangeErr(Ary* p, int i) : ident(p), index(i) {}                      
+
+        int Index(void)  { return (index); }                                 
+
+    };                                                                       
+
+                                                                             
+
+    Ary(int sz)         { ptr = new Type[size = sz]; }  //建構元
+
+    Ary(const Ary&);                              //複製建構元
+
+                                                                             
+
+    ~Ary(void)          { delete[] ptr; }               //解構元
+
+                                                                             
+
+    Ary& operator=(const Ary&);                         // 指定運算子        
+
+                                                                             
+
+    Type& operator[](int i)                             // 足標運算子      
+
+    { 
+
+        if (i < 0 || i >= size)                                              
+
+            throw RangeErr(this, i);        //丟出足標範圍錯誤
+
+        return (ptr[i]);                                                     
+
+    }                                                                        
+
+};                                                                           
+

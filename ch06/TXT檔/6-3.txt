@@ -1,0 +1,90 @@
+ List6-3 
+ /*                                      
+
+     函數的多重定義                    
+
+ */                                      
+
+                                         
+
+ #include    <iostream.h>                
+
+                                         
+
+ //--- 傳回兩個整數a, b的最大值 ---//
+
+ int maxof(int a, int b)                  
+
+ {                                       
+
+     if (a > b)                           
+
+         return (a);                      
+
+     else                                
+
+         return (b);                                                              
+
+ }                                                                                
+
+                                                                                  
+
+ //---傳回3個整數a, b, c的最大值---//                                    
+
+ int maxof(int a, int b, int c)                                                   
+
+ {                                             
+
+     int max = a;                                                                 
+
+     if (b > max) max = b;                                                        
+
+     if (c > max) max = c;                                                        
+
+     return (max);                                                                
+
+ }                                                                                
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {                                                                             
+
+     int x, y, z;                                                                 
+
+                                                                                  
+
+     // 兩個值的最大值                                                             
+
+     cout << "請輸入x的值 : ";                                         
+
+     cin >> x;                                                                    
+
+                                                                                  
+
+     cout << "請輸入y的值 : ";                                         
+
+     cin >> y;                                                                    
+
+                                                                                  
+
+     cout << "x和y較大一方的值是" <<  maxof(x, y) << "。\n\n";            
+
+                                                                                  
+
+     // 三個值之最大值                                                              
+
+     cout << "請輸入z的值 : ";                                         
+
+     cin >> z;                                                                    
+
+                                                                                  
+
+     cout << " x, y, z 的最大值是" <<  maxof(x, y, z) << "。\n";               
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                

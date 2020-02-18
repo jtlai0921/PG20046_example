@@ -1,0 +1,69 @@
+ /*                                                                              
+
+     表類別之測試程式                                            
+
+ */                                                                              
+
+                                                                                 
+
+ #include    <string>                  
+
+ #include    <iostream.h>              
+
+                                       
+
+ #include    "table.h"                 
+
+                                       
+
+ int main(void)                        
+
+ {                                     
+
+     int     i;                                                                  
+
+     AryTable<int>       x(10);      // 陣  列  版int型態表
+
+     SlistTable<int>     y;          // 線性串列版int型態表
+
+                                                                                 
+
+     AryTable<string>    s(3);       //陣  列  版string型態表
+
+                                                                                 
+
+     for (i = 0; i < 10; i++)                                                    
+
+         x[i] = i;                                                               
+
+                                                                                 
+
+     y.Insert(1);        y.Insert(2);      y.Insert(3);                          
+
+                                                                                 
+
+     s[0] = "monkey";    s[1] = "cat";     s[2] = "dog";                         
+
+                                                                                 
+
+     cout << "在陣列x裡有6嗎：" << x.Search( 6) << '\n';               
+
+     cout << "在陣列x裡有10嗎：" << x.Search(10) << '\n';              
+
+                                                                                 
+
+     cout << "在串列y裡有6嗎：" << y.Search( 1) << '\n';             
+
+     cout << "在串列y裡有10嗎：" << y.Search(10) << '\n';            
+
+                                                                                 
+
+     cout << "在陣列s裡有cat嗎："  << s.Search("cat") << '\n';         
+
+     cout << "在陣列s裡裡有seal嗎：" << s.Search("searl") << '\n';       
+
+                                                                                 
+
+     return (0);                                                                 
+
+ }                                                                           

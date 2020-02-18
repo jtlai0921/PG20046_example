@@ -1,0 +1,66 @@
+ /*                                               
+
+ 　　 使用梯形公式的積分程式(第一版)    
+
+ */                                               
+
+                                                  
+ #include      <iostream.h>                         
+
+                                                    
+
+ //--- 函數f(x) ---//                              
+
+ double f(double x)                                  
+
+ {                                                  
+
+ 　　return (x * x);                                
+
+ }                                                  
+
+                                                                         
+
+//---使用梯形公式將函數f(x) 分割成n等份從x1積到x2為止的函數 ---//   
+                                                   
+
+ double daikei(double x1, double x2, int n)
+      
+{
+
+　　double s = 0.0;                                            
+
+　　double step = (x2 - x1) / n;                               
+
+　　for (int i = 0; i < n; i++)                                
+
+　　　　s += ( f(x1 + step * i) + f(x1 + step * (i + 1)) ) * st
+
+　　return (s);                                                
+
+}                                                              
+
+                                                               
+
+int main(void)                                                 
+
+{
+
+　　int　　 n;                                                 
+
+　　double　x1, x2;                                            
+
+                                                               
+
+　　cout << "開  始：";    cin >> x1;                          
+
+　　cout << "結  束：";    cin >> x2;                          
+
+　　cout << "分割數：";    cin >> n;                           
+
+　　cout << "積分值＝" << daikei(x1, x2, n) << '\n';           
+
+　　                                                           
+
+    return(0); 
+}

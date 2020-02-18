@@ -1,0 +1,36 @@
+ List7-2
+ /*                                                                               
+
+     顯示各整數型態的表達範圍	     
+
+ */                                                                               
+
+                                  
+
+ #include    <limits.h>          
+
+ #include    <iostream.h>        
+
+                                 
+
+ int main(void)                  
+
+ {
+
+     cout << "char      : " << CHAR_MIN << "～" << CHAR_MAX << '\n';           
+
+     cout << "short int : " << SHRT_MIN << "～" << SHRT_MAX << '\n';           
+
+     cout << "int       : " << INT_MIN  << "～" << INT_MAX  << '\n';           
+
+     cout << "long      : " << LONG_MIN << "～" << LONG_MAX << '\n';           
+
+                                                                               
+
+     return (0);                                                               
+
+ }
+
+                                        
+
+ 

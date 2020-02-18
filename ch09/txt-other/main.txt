@@ -1,0 +1,14 @@
+//---main---//
+int main (void)
+{
+   menu  menu;
+   mfunc  pmunu[] = {insert_date, delete_data, print_data};
+
+   do{
+       menu = SelectMenu( );
+       if (menu > Termination && menu < Invalid)
+         pmenu[menu - 1]( );
+   } while (menu != Termination);
+
+   return(0);
+ }

@@ -1,0 +1,49 @@
+List 8-3
+ /*                                                                      
+
+    判斷被輸入的年是不是閏年                         
+
+ */                                                                      
+
+                                                                         
+
+ #include    <iostream.h>                                                
+
+                                                                         
+
+ //--- year如果是閏年的話，傳回1，如果不是的話傳回0。 ---//          
+
+ int isleap(int year)                                                    
+
+ {
+
+     return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0);       
+
+ }                                                                       
+
+                                                                         
+
+ int main(void)                           
+ { 
+     int year;                                                                                                 
+
+     cout << "請輸入西元年：";                               
+
+     cin >> year;                                                        
+
+                                                                         
+
+     if (isleap(year))                                                   
+
+         cout << year << "年是閏年。\n";                             
+
+     else                                                                
+
+         cout << year << "年不是閏年。\n";                   
+
+                                                                         
+
+     return (0);                                                         
+
+ }                                                                       
+

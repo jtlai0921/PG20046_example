@@ -1,0 +1,63 @@
+ /*                                                                               
+
+     確認基礎類別與成員的初始化之類別群                                 
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ class Base {
+
+                                                                                  
+
+ public:                                                                          
+
+     int  x;                                                                      
+
+     Base(int a=0) { cout << "將Base::x以" << (x = a) << "初期化。\n"; }  
+
+ };                                                                               
+
+                                                                                  
+
+ class Memb {
+
+                                                                                  
+
+ public:                                                                          
+
+     int  x;                                                                      
+
+     Memb(int a=0) { cout << "將Memb::x以" << (x = a) << "初始化。\n"; }  
+
+ };                                                                               
+
+                                                                                  
+
+ //----- Derived從Base公用衍生 -----//                                       
+
+ class Derived : public Base {      
+
+                                                                                  
+
+ private:                                                                         
+
+     int  y;                                                                      
+
+     Memb m;                                                                      
+
+     void say(void) { cout << "將Derived::y以" << (y = 0) <<"初始化。\n";}
+
+                                                                                  
+
+ public:                                                                          
+
+     Derived(void)                           { say(); }                           
+
+     Derived(int a, int b) : m(a), Base(b)   { say(); }                           
+
+ };                                                                             

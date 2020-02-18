@@ -1,0 +1,47 @@
+ List6-19 
+
+ /*                                                
+
+  肚把计ㄧ计                           
+
+ */                                                
+
+                                                   
+
+ #include     <iostream.h>                         
+
+                                                   
+
+ //--- 肚xぇ把计ㄧ计 ---//               
+
+ int& ref(void)                                    
+
+ {                                                 
+
+     static int  x;       // x琌繰篈纗跋丁      
+
+                                                   
+
+     return (x);                                   
+
+ }                                                 
+
+                                                   
+
+ int main(void)                                    
+
+ { 
+
+     ref() = 5;                                  //ref( )  
+
+                                                                      
+
+     cout << "ref() = " << ref() << '\n';        // ボref( )   
+
+                                                                      
+
+     return (0);                                                      
+
+ }                                         
+
+

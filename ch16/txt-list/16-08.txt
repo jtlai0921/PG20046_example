@@ -1,0 +1,41 @@
+ //---------------------------------------------------------------------// 
+
+ //  案计患糤摸  Bcounter            "bcounter.h"       // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                
+
+ #include    "counter.h"                                                        
+
+                                                                                
+
+ //=====案计患糤摸 =====//                                       
+
+ class Bcounter : private Counter {
+
+                                                                                
+
+ public:                                                                        
+
+     Bounter(void) { }                           //篶じ            
+
+                                                                                
+
+     Counter::Value;                    //ㄧ计Value    
+
+                                                                                
+
+     void Increment(void) {                // 患糤﹚竡     
+
+         if (Value() < UINT_MAX - 1) { 
+
+             Counter::Increment();                                              
+
+             Counter::Increment();                                              
+
+         }                                                                      
+
+     }                                                                          
+
+ };                                                                             

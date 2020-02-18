@@ -1,0 +1,73 @@
+List 9-1
+ /*                                                   
+
+  求身材最高的人的身高和最重的人的體重
+ */                                                   
+
+                                                      
+ #include    <iostream.h>                      
+
+ #include    <iomanip.h>                       
+
+                                               
+
+ //--- 傳回元素數n的陣列x之最大值 ---//
+
+ int maxof(int x[], int n)                     
+
+ {                                             
+
+     int max = x[0];                           
+
+     for (int i = 1; i < n; i++)               
+
+         if (x[i] > max)                       
+
+             max = x[i];                       
+
+     return (max);                             
+
+ }                                             
+
+                                               
+
+ int main(void)                                
+
+ {
+
+     const int ninzu = 10;                     
+
+     int height[ninzu];                        
+
+     int weight[ninzu];                        
+
+                                               
+     cout << ninzu << "輸入人的身高和體重??：\n";         
+
+     for (int i = 0; i < ninzu; i++) {
+
+         cout << setw(2) << i+1 << "號的身高：";            
+
+         cin >> height[i];                                    
+
+         cout << setw(2) << i+1 << "號的體重：";            
+
+         cin >> weight[i];                                    
+
+     }                                                        
+
+     int hmax = maxof(height, ninzu);                         
+
+     int wmax = maxof(weight, ninzu);                         
+
+                                                              
+
+     cout << "最高者的身高：" << hmax << "cm\n";      
+
+     cout << "最重者的體重：" << wmax << "kg\n";      
+
+                                                              
+
+     return (0);                                              
+
+ }                                                            

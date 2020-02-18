@@ -1,0 +1,69 @@
+List 6-11
+ /*                                  
+
+     猜數字遊戲 (輸出入關係) "io.c"  
+
+ */                                  
+
+                                 
+
+ #include    <stdlib.h>              
+
+                                     
+ extern int  max_no; 
+
+ static void inp_message(void)                  
+ {
+                                     
+
+   cout << "０～" << max_no   
+
+         << "輸入數字：";
+
+}                            
+
+                             
+int input(void)     //-- 輸入解答 --// 
+
+{ 
+
+ int kazu;          
+
+ do {
+
+     inp_message(); 
+
+     cin >> kazu;  
+    
+}                   
+ 
+    } while (kazu < 0 || kazu > max_no); 
+
+
+    return (kazu);  
+
+}                   
+
+int cont_game(void) //-- 確任續行--// 
+
+{ 
+
+    int cont;   
+
+    cout << "要再一次嗎？\n"  
+
+         << "<Yes?1／No?0>:"
+
+    cin >> cont;                    
+
+    return (cont);                  
+
+ }                              
+
+
+
+
+
+
+
+

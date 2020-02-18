@@ -1,0 +1,34 @@
+ List2-3 
+/*
+
+   耞块琌计临琌案计
+
+*/
+
+
+ #include    <iostream.h>                 
+
+
+ int main(void)                           
+
+
+     int     x;                           
+
+
+     cout << "叫块俱计x";       
+
+     cin >> x;                            
+
+
+     if (x % 2)                           
+
+         cout << "x琌计\n";      
+
+     else                                 
+
+         cout << "x琌案计\n";      
+
+
+     return (0);                          
+
+ }                                        

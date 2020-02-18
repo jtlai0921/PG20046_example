@@ -1,0 +1,30 @@
+list 2-2
+/*
+
+    輸入的數值除以3（if…else…）
+
+*/
+
+                                
+
+ #include    <iostream.h>       
+
+                                
+
+ int main(void)                 
+ {
+     int     x; 
+     cout << "請輸入整數值x："; 
+     cin >> x;                                
+ 
+     if (x % 3)                               
+
+         cout << "x無法以3整除。\n";
+
+     else                                     
+         cout << "x可以以3整除。\n";  
+
+     return (0);                              
+
+ }    
+                                        

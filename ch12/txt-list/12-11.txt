@@ -1,0 +1,30 @@
+//---------------------------------------------------------------------// 
+
+//§È¥¡√˛ßODate≤ƒ2'™©°]§∂≠±≥°§¿°^Åj      "date.h"         // 
+
+//--------------------------------------------------------------------// 
+
+                                                                                 
+
+#include    <iostream.h>                                                         
+
+                                                                                 
+
+//=====§È¥¡√˛ßO=====//                                                       
+
+class Date {
+
+    // °K°]§§∂°¨Ÿ≤§°^ °K                                                           
+
+public:                                                                          
+
+    // °K°]§§∂°¨Ÿ≤§°^ °K                                                            
+
+    int CompY(int y) const { return (y - year);  }  // ∂«¶^ªP¶~§ß∂°™∫Æt
+
+    int CompM(int m) const { return (m - month); }  // ∂«¶^ªP§Î§ß∂°™∫Æt   
+
+    int CompD(int d) const { return (d - day);   }  // ∂«¶^ªP§È§ß∂°™∫Æt        
+
+};                                                                               
+ostream& operator<<(ostream& s, const Date& x); //¥°§JπB∫‚§l

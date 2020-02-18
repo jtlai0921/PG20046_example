@@ -1,0 +1,46 @@
+ //---------------------------------------------------------------------// 
+
+ // 帶有開戶日期的銀行帳號類別Account（實現部分）              "account.c"         // 
+
+ //--------------------------------------------------------------------// 
+
+                                                                               
+
+ #include    "account.h"                                                       
+
+                                                                               
+
+ //---建構元 ---//                                                    
+
+ Account::Account(long no, long sav, int y, int m, int d) : open(y, m, d)      
+
+ {
+
+     number = no;                                                              
+
+     savings = sav;                                                              
+
+ }                                                                             
+                                                                               
+
+ //---存錢至帳戶內 ---//                                                
+
+ void Account::Save(long money)                                                
+
+ {
+
+     savings += money;                                                           
+
+ }                                                                             
+
+                                                                               
+
+ //---自帳戶提款 ---//                                                  
+
+ void Account::Withdraw(long money)                                            
+
+ {
+
+     savings -= money;                                                           
+
+ }                                                                             

@@ -1,0 +1,19 @@
+List 6-9
+ /*                                
+
+     傳回積的函數mul  "mul.c"   
+
+ */                                
+
+                                   
+
+ //--- 傳回 x和y 的積 ---//   
+
+ double mul(double x, double y)    
+
+ {   
+                              
+   return (x * y);
+
+}
+

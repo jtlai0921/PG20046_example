@@ -1,0 +1,30 @@
+List4-5
+/*                           
+
+    將輸入拷貝到輸出
+
+
+*/                           
+
+ #include    <iostream.h>         
+
+                                  
+
+ int main(void)                   
+
+ {                                
+
+     char    c;                   
+
+
+     cin >> noskipws;             
+
+     while (cin >> c)             
+
+         cout << c;               
+
+      return (0);                  
+
+ }  
+
+

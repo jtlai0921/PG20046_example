@@ -1,0 +1,79 @@
+ /*                                                                          
+
+     虛擬基礎類別與虛擬函數                                              
+
+ */                                                                          
+
+                                                                             
+
+ #include    <iostream.h>                                  
+
+ class V {                                                 
+ public:                                                   
+
+     virtual void f1(void) { cout << "V::f1()\n"; }        
+
+     virtual void f2(void) { cout << "V::f2()\n"; }          
+
+     virtual void f3(void) { cout << "V::f3()\n"; }                          
+
+ };                                                                          
+
+                                                                             
+
+ class X : public virtual V {
+
+ public:                                                                     
+
+     void f1(void) { cout << "X::f1()\n"; }                                  
+
+ };                                                                          
+
+                                                                             
+
+ class Y : public virtual V {
+
+ public:                                                                     
+
+     void f2(void) { cout << "Y::f2()\n"; }                                  
+
+ };                                                                          
+
+                                                                             
+
+ class Z : public X, public Y {
+
+ public:                                                                     
+
+     void f3(void) { cout << "Z::f3()\n"; }                                  
+
+ };                                                                          
+
+                                                                             
+
+ int main(void)                                                              
+
+ {
+
+     Z   temp;                                                               
+
+                                                                             
+
+     temp.f1();                                                              
+
+     temp.f2();                                                              
+
+     temp.f3();                                                              
+
+                                                                             
+
+     ((X*)&temp)->f1();                                                      
+
+     ((Y*)&temp)->f1();                                                      
+
+                                                                             
+
+     return (0);                                                             
+
+ }                                                                           
+

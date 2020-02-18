@@ -1,0 +1,130 @@
+
+/*                                                                      
+
+√d™´Ωu© ¶Í¶C√˛ßOPetList  ¢w®œ•ŒπÍ®“¢wópó· Å|                       
+
+*/                                                                      
+
+                                                                        
+
+#include    <iostream.h>                                                
+
+                                                                        
+
+#include    "petlist.h"                                                 
+
+                                           enum Menu {
+
+    Terminate, Insert, Append, DspFirst, DspLast, Delete, Remove, Clear,  
+
+    Print, Intro, MenuOver                                                
+
+};                                                                        
+
+ Menu SelectMenu(void)                               // øÔæ‹≤M≥ÊëIë           
+
+ {
+
+     int     ch;                                                               
+
+                                                                               
+
+     do { 
+
+         cout << "(1)¥°§J¶‹∂}¿Y    (2)∑sºW¶‹•Ω∫› "îˆÇ…í«â¡  "                            
+
+              << "(3)≈„•‹∂}¿Y      (4)≈„•‹•Ω∫›\n";                           
+
+         cout << "(5)ßR∞£∂}¿Y      (6)ßR∞£•Ω∫›  "                            
+
+              << "(7)ßR∞£•˛≥°      (8)≈„•‹•˛≥° \n";                           
+
+         cout << "(9)®Ã¶Í¶C∂∂ß«¶€ß⁄§∂≤–      °]0°^µ≤ßÙ\n";                           
+
+         cin >> ch;                                                            
+
+     } while (ch < Terminate || ch >= MenuOver);                               
+
+     return ((Menu)ch);                                                        
+
+ }                                                                             
+
+                                                                               
+
+ int main(void)                                                                
+
+ {
+
+     Menu    menu;                                                             
+
+     PetList list;                                                             
+
+                                                                               
+
+     do {
+
+         menu = SelectMenu();                                                  
+
+         switch (menu) { 
+
+          PetNode* p;                                                          
+
+          case Insert :  {   cout << "Ω–øÈ§J±˝¥°§J¶‹∂}¿Y™∫∏ÍÆ∆°C\n";     
+
+                             Pet* x = new Pet();                               
+
+                             x->Input();                                       
+
+                             PetNode* n = new PetNode(x);                      
+
+                             list.Insert(n);                                   
+
+                         } break;                                              
+
+                                                                               
+
+          case Append :  {   cout << "Ω–øÈ§J±˝∑sºW¶‹•Ω∫›™∫∏ÍÆ∆°C\n";     
+
+                             Pet* x = new Pet();                               
+
+                             x->Input();                                       
+
+                             PetNode* n = new PetNode(x);                      
+
+                             list.Append(n);                                   
+
+                         } break;                                              
+
+                                                                               
+
+          case DspFirst: if (p = list.Top())                                   
+
+                             ((Pet*)*p)->Sintro(); break;                      
+
+                                                                               
+
+          case DspLast : if (p = list.Bottom())                                
+
+                             ((Pet*)*p)->Sintro(); break;                      
+
+                                                                               
+
+          case Delete  : list.Delete(); break;                                 
+
+          case Remove  : list.Remove(); break;                                 
+
+          case Clear   : list.Clear();  break;                                 
+
+          case Print   : cout << list;  break;                                 
+
+          case Intro   : list.Introduce(); break;                              
+
+         }                                                                     
+
+     } while (menu != Terminate);                                              
+
+                                                                               
+
+     return (0);                                                               
+
+ }                                                                             

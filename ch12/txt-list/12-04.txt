@@ -1,0 +1,38 @@
+/*                                                                               
+
+   ªì©l¤Æ»P«ü©w                                                       
+
+*/                                                                               
+                                                                          
+
+#include    <iostream.h>                  
+
+include    "date.h" 
+
+
+int main(void)                                                                   
+
+{
+
+    Date    Xday = Date(1999, 12, 31);      // ªì©l¤Æ                            
+    Date    Birthday(1963, 11, 18);         // ªì©l¤Æ                           
+
+    Xday = Date(1995, 8, 1);                // «ü©w‘ã“ü                              
+
+    cout << "Birthday = " << Birthday.Year()  << "¦~"                            
+
+                          << Birthday.Month() << "¤ë"                            
+
+                          << Birthday.Day()   << "¤é\n";                         
+
+                                                                                 
+
+    cout << "Xday = "     << Xday.Year()  << "¦~"                                
+
+                          << Xday.Month() << "¤ë"                                
+
+                          << Xday.Day()   << "¤é\n";                             
+
+    return (0);                                                                  
+
+}                                                                                

@@ -1,0 +1,22 @@
+List 6-14
+ /*                                                                              
+
+     猜數字遊戲 (表頭)                            "kazu.h"                  
+
+ */                                                                              
+                  
+
+ void start(void);       // 【製作問題】 用亂數製作一個0~max_no的值 
+
+ int judge(int cnad);    // 【判斷解答】 如果cand 是正確解答，傳回0
+                                                                                 
+
+ int input(void);        // 【解答的輸入】 使輸入0~max_no 的值  
+
+ int cont_game(void);    // 【續行的確認】 確認是否繼續
+
+                                                                                 
+
+ const int max_no = 9;   // 問題的上限                                          
+
+                                                                                 

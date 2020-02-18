@@ -1,0 +1,86 @@
+List6-5 
+ /*                                                                               
+
+     ―皚程 (template)                                       
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ //---肚じ计n  Type 篈皚x程ㄧ计template ---//               
+
+ template <class Type>                                                            
+
+ Type maxof(Type x[], int n)                                                      
+
+ { 
+
+     Type max = x[0];                                                             
+
+     for (int i = 1; i < n; i++)                                                  
+
+         if (x[i] > max)                                                          
+
+             max = x[i];                                                          
+
+     return (max);                                                                
+
+ }                                                                                
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     const int isize = 8;                                                         
+
+     int       ix[isize];                                                         
+
+                                                                                  
+
+     //  俱计皚程                                                      
+
+     cout << isize << "块俱计计\n";                                   
+
+     for (int i = 0; i < isize; i++) {
+
+         cout << i + 1 << "";                                                   
+
+         cin >> ix[i];                                                            
+
+     }                                                                            
+
+     cout "程琌" << maxof(ix, isize) << "??\n\n";                         
+
+                                                                                  
+
+     const int dsize =  5;                                                        
+
+     double    dx[dsize];                                                         
+
+                                                                                  
+
+     //   龟计皚程                                                         
+
+     cout << dsize << "块俱计计\n";                                   
+
+     for (i = 0; i < dsize; i++) {
+
+         cout << i + 1 << "";                                                   
+
+         cin >> dx[i];                                                            
+
+     }                                                                            
+
+     cout "程琌" << maxof(dx, dsize) << "??\n";                           
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                

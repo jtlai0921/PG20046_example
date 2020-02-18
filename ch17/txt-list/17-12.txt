@@ -1,0 +1,167 @@
+ /*                                                                               
+繼承版寵物線性串列類別PetList  ─使用實例─
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ #include    "petlist.h"                                                          
+
+                                                                                  
+
+ enum Menu { 
+
+     Terminate, Insert, Append, DspFirst, DspLast, Delete, Remove, Clear,         
+
+     Print, Intro, MenuOver                                                       
+
+ };                                                                               
+
+                                                                                  
+
+ //-----輸入資料-----//                                                       
+
+ Pet* AllocPet(void)                                                              
+
+ { 
+
+     int     kind;                                                                
+
+     Pet*    ptr;                                                                 
+
+                                                                                  
+
+     do { 
+
+         cout << "品種 【0‥狗,  1‥貓,  3‥猴】: ";                             
+
+         cin >> kind;                                                             
+
+     } while (kind < 0 || kind > 2);                                              
+
+     switch (kind) {
+
+      case 0 : ptr = new Pdog();     break;                                       
+
+      case 1 : ptr = new Pcat();     break;                                       
+
+      case 2 : ptr = new Pmonkey();  break;                                       
+
+     }                                                                            
+
+     return (ptr);                                                                
+
+ }                                                                                
+
+                                            Menu SelectMenu(void)        //-----選擇清單-----//                        
+
+ {
+
+     int     ch;                                                                  
+
+                                                                                  
+
+     do { 
+
+         cout << "(1)插入至開頭   （2）新增至末端"                               
+
+              << "(3)顯示開頭     （4）顯示末端\n";                              
+
+         cout << "(5)刪除開頭      （6）刪除末端"                               
+
+              << "(7)刪除全部     （8）顯示全部\n";                              
+
+         cout << "(9) 依串列順序自我介紹  （0）結束\n";                              
+
+         cin >> ch;                                                               
+
+     } while (ch < Terminate || ch >= MenuOver);                                  
+
+     return (Menu(ch));                                                           
+
+ }                                                                                
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     Menu    menu;                                                                
+
+     PetList list;                                                                
+
+                                                                                  
+
+     do { 
+
+         menu = SelectMenu();                                                     
+
+         switch (menu) {
+
+          PetNode* p;                                                             
+
+          case Insert  : {   cout << "輸入欲插入至開頭的資料。\n";        
+
+                             Pet* x = AllocPet();                                 
+
+                             x->Input();                                          
+
+                             PetNode* n = new PetNode(x);                         
+
+                             list.Insert(n);                                      
+
+                         } break;                                                 
+
+                                                                                  
+
+          case Append  : {   cout << "輸入欲新增至末端的資料。\n";        
+
+                             Pet* x = AllocPet();                                 
+
+                             x->Input();                                          
+
+                             PetNode* n = new PetNode(x);                         
+
+                             list.Append(n);                                      
+
+                         } break;                                                 
+
+                                                                                  
+
+          case DspFirst: if (p = list.Top())                                      
+
+                             ((Pet*)*p)->Sintro(); break;                         
+
+                                                                                  
+
+          case DspLast : if (p = list.Top())                                      
+
+                             ((Pet*)*p)->Sintro(); break;                         
+
+                                                                                  
+
+          case Delete  : list.Delete(); break;                                    
+
+          case Remove  : list.Remove(); break;                                    
+
+          case Clear   : list.Clear();  break;                                    
+
+          case Print   : cout << list;  break;                                    
+
+          case Intro   : list.Introduce(); break;                                 
+
+         }                                                                        
+
+     } while (menu != Terminate);                                                 
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                
+                                       

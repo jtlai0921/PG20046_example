@@ -1,0 +1,46 @@
+ //---------------------------------------------------------------------// 
+
+ //  “ú•tƒN¤é´ÁÃş§ODate²Ä2ª©¡]¤¶­±³¡¤À¡^j      "date.h"          // 
+
+ //----------------------------------------------------- ----------------// 
+                                                                                 
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ //===== ¤é´ÁÃş§O=====//                                                       
+
+ class Date {
+
+                                                                                  
+
+ private:                                                                         
+
+     int     year;       // ¦è¤¸¦~¼—ï”N                                                
+
+     int     month;      // ¤ë                                                    
+
+     int     day;        // ¦~“ú                                                    
+
+                                                                                  
+
+ public:                                                                          
+
+     Date(void);                             // ƒfƒt¹w³]«Øºc¨ç¼Æƒ^      
+
+     Date(int y, int m = 1, int d =1);           // «Øºc¨ç¼Æƒ^                
+
+                                                                                  
+
+     int Year(void)  const { return (year); }    // ¶Ç¦^¦~
+
+     int Month(void) const { return (month); }   // ¶Ç¦^¤ë•Ô‹p                      
+
+     int Day(void)   const { return (day); }     // ¶Ç¦^¤é“ú‚ğ•Ô‹p                      
+
+ };                                                                               
+
+                                                                                  
+
+ ostream& operator<<(ostream& s, Date& x);       // ´¡¤J¹Bºâ¤l                    

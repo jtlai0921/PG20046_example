@@ -1,0 +1,56 @@
+List 6-11
+ /*                                  
+
+     猜數字遊戲 (解答關係) "kai.c"  
+
+ */                                  
+
+                                     
+
+ #include    <stdlib.h>              
+
+                                     
+
+ static int  kotae = 0;              
+
+ extern int  max_no;                 
+
+                                     
+
+ //--- 製作一個0~max的數字---//   
+
+ void start(void)                    
+
+ {                                   
+
+     kotae = rand() % (max_no + 1);  
+
+ }                                   
+
+                                     
+
+ //---判斷 ---//                    
+
+ int judge(int cand)                 
+
+ {                                   
+
+     int diff = cand - kotae;        
+
+                                     
+
+     if (diff == 0)      // 正確解答     
+
+         return (0);                 
+
+     else if (diff > 0)  // 大   
+
+         return (1);                 
+
+     else                // 小   
+
+         return (-1);                
+
+ }                                   
+
+                                     

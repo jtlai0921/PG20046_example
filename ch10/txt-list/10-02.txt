@@ -1,0 +1,37 @@
+ /*                                                                             
+
+     儲存字串"ABC"並顯示出                                           
+
+ */                                                                             
+
+                                                                                
+
+ #include    <iostream.h>                    
+
+                                              
+
+ int main(void)                                                                 
+
+ {
+
+     char str[4];        // 用以儲存字串的陣列                          
+
+                                                                                
+
+     str[0] = 'A';                                   // 指定                   
+
+     str[1] = 'B';                                   // 指定                    
+
+     str[2] = 'C';                                   // 指定                   
+
+     str[3] = '\0';                                  // 指定                   
+
+                                                                                
+
+     cout << "字串str是" <<str<< "。\n";             // 顯示                   
+
+                                                                                
+
+     return (0);                                                                
+
+ }                                                                              

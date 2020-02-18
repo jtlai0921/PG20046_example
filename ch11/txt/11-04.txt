@@ -1,0 +1,66 @@
+ /*                                                                           
+
+     銀行帳戶類別（原始版）                                              
+
+ */                                                                           
+
+                                                                              
+
+ #include    <iostream.h>                          
+
+ //=====銀行帳戶類別 =====//                    
+
+ class account {                                  
+
+ public:                             //===== 公用部分 =====// 
+
+     long    number;                     // 帳戶號碼   
+
+     long    savings;                      // 存款額  
+
+ };                                               
+                                                                              
+
+ int main(void)                                                               
+
+ {
+
+     account   drmaster1 = {1234569,  0};     // 小碩的銀行帳戶             
+
+                                                                              
+
+     account   drmaster;                     // 小博的銀行帳戶              
+
+     drmaster.number = 3468924;                                               
+
+     drmaster.savings  = 10;                                                  
+
+                                                                              
+
+     drmaster1.savings += 100;                // 小碩存入100元         
+
+                                                                              
+
+     drmaster.savings -= 5;                  // 小博取出5元       
+
+                                                                              
+
+     cout << "小碩的帳戶\n";                                                
+
+     cout << "帳戶號碼＝" << drmaster1.number << '\n';                        
+
+     cout << "存 款 額＝" << drmaster1.savings  << "元\n\n";                  
+
+                                                                              
+
+     cout << "小博的帳戶\n";                                                
+
+     cout << "帳戶號碼＝" << drmaster.number << '\n';                         
+
+     cout << "存 款 額＝" << drmaster.savings  << "?\n";                     
+
+                                                                              
+
+     return (0);                                                              
+
+ }                                                                           

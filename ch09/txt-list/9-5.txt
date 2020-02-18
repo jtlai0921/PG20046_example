@@ -1,0 +1,68 @@
+List 9-5
+ /*                                         
+
+     動態地生成整數物件          
+
+ */                                         
+
+                                            
+
+ #include    <new.h>                        
+
+ #include    <iostream.h>                   
+
+                                            
+
+ int main(void)                             
+
+ {                                          
+
+     int  asize;                            
+
+     int* a;                                
+
+                                            
+
+     cout << "請輸入生成的陣列的元素數：";  
+
+     cin >> asize;                          
+
+                                            
+
+     try {
+
+         a = new int[asize];                                                      
+
+     }                                                                            
+
+                                                                                  
+
+     catch (xalloc) {
+
+         cout << "無法作記憶體的確保，所以程式終了。\n";      
+
+         return (1);                                     // 異常終了              
+
+     }                                                                            
+
+                                                                                  
+
+     for (int i = 0; i < asize; i++)                                              
+
+         a[i] = i;                                                                
+
+                                                                                  
+
+     for (i = 0; i < asize; i++)                                                  
+
+         cout << "a[" << i << "] = " << a[i] << '\n';                             
+
+                                                                                  
+
+     delete[] a;                                                                  
+
+                                                                                  
+
+     return (0);                                         // 正常終了              
+
+ }                                                                           

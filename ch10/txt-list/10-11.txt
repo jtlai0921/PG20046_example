@@ -1,0 +1,36 @@
+ /*                                                                          
+
+     字串的表現實例                                                        
+
+ */                                                                          
+
+                                                                             
+
+ #include    <string.h>                       
+
+ #include    <iostream.h>                     
+
+                                                                             
+
+ int main(void)                                                              
+
+ {
+
+     char*   dynamic = new char[8];                                          
+
+     strcpy(dynamic, "ABCD");                                                
+
+                                                                             
+
+     cout << "字串dynamic：" << dynamic << '\n';                          
+
+                                                                             
+
+     delete[] dynamic;                                                       
+
+                                                                             
+
+     return (0);                                                             
+
+ }                                                                           
+

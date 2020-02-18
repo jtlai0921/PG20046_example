@@ -1,0 +1,45 @@
+ //---------------------------------------------------------------------// 
+
+ //  整數陣列類別IntAry第4版（實現部分）            "intary.c"        // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                             
+
+ #include    "intary.h"                                                      
+
+                                                                             
+
+ int IntAry::counter = 0;                                                    
+
+                                                                             
+
+ //--- 複製建構元 ---//                                            
+
+ IntAry::IntAry(const IntAry& x)                                             
+
+ {
+
+     ptr = new int[x.size];                                                  
+
+     size = x.size;                                                          
+
+     for (int i = 0; i < size; i++)                                          
+
+         ptr[i] = x.ptr[i];                                                  
+
+     CntUp();                                                                
+
+ }                                                                           
+
+                                                                             
+
+ //--- 指定運算子 ---//                                                      
+
+ IntAry& IntAry::operator=(const IntAry& x)                                  
+
+ {
+
+     // （省略）… 與第2版相同                                        
+
+ }                                                                           

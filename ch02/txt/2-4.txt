@@ -1,0 +1,52 @@
+List2-4
+/*
+
+   顯示兩個整數值的大小關係(if….else if..)
+
+*/
+
+                                             
+
+ #include    <iostream.h>                   
+
+                                            
+
+ int main(void)                             
+
+ {                                         
+
+     int     a, b;                           
+
+                                            
+
+     cout << "請輸入整數值a：";          
+
+     cin >> a;                               │
+
+                                           
+
+     cout << "請輸入整數值b：";         
+
+     cin >> b;                               
+
+
+                                            
+
+     if (a < b)                               
+
+         cout << "a比b小。\n";   
+
+     else if (a > b)                         
+
+         cout << "a比b大。\n"; 
+
+     else                                    
+
+         cout << "a與b相等。\n";   
+
+                                             
+
+     return (0);                             
+
+ }                                           
+

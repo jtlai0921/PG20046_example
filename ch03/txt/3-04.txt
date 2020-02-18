@@ -1,0 +1,45 @@
+List3-4
+ /*                                        
+
+      璸衡块じ计                 
+
+ */                                        
+
+                                           
+
+ #include    <iostream.h>                  
+
+                                           
+
+ int main(void)                            
+
+ {                                         
+
+     char    c;                            
+
+     int     ccount = 0;     //じ计      
+
+     int     ncount = 0;     //传︽计     
+
+                                           
+
+     while (cin.get(c)) {                  
+
+         ccount++;                         
+
+         if (c == '\n')                    
+
+             ncount++;                     
+
+     }                                     
+
+     cout << "じ计∽" << ccount << '\n'; 
+
+     cout << "传︽计∽" << ncount << '\n'; 
+
+                                           
+
+     return (0);                           
+
+ }                                         
+

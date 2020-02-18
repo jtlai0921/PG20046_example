@@ -1,0 +1,75 @@
+List 18-8
+/*                                                                             
+
+   °òÂ¦Ãþ§Oªºªì©l¤Æ                                                        
+
+*/                                                                             
+
+                                                                               
+
+#include    <iostream.h>                     
+
+                                             
+
+lass Base1 {                                 
+
+                                            
+
+public:                                                                        
+
+    int x;                                                                     
+
+    Base1(int a=0) { cout << "±NBase1::x‚ð¥H" << (x=a) << "¶i¦æªì©l¤Æ\n"; }         
+
+};                                                                             
+
+                                                                               
+
+class Base2 {
+
+                                                                               
+
+public:                                                                        
+
+    int x;                                                                     
+
+    Base2(int a=0) { cout << "±NBase2::x‚ð¥H" << (x=a) << "¶i¦æªì©l¤Æ\n"; }         
+
+};                                                                             
+
+                                                                               
+
+//----- ¦ÛBase1¡ABase2¶i¦æ¨p¦³­l¥Í-----//                                      
+
+class Derived : Base1, Base2 {
+
+                                                                               
+
+private:                                                                       
+
+    int  y;                                                                    
+
+    void say(void) { cout << "±NDerived::y‚ð¥H" << (y=0) << "¶i¦æªì©l¤Æ\n"; }       
+
+                                                                               
+
+public:                                                                        
+
+    Derived(int a, int b) : Base2(a), Base1(b) { say(); }                      
+
+};                                                                             
+
+                                                                               
+
+int main(void)                                                                 
+
+{
+
+    Derived b(1, 2);                                                           
+
+                                                                               
+
+    return (0);                                                                
+
+}                                          
+                                    

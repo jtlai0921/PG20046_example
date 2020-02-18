@@ -1,0 +1,52 @@
+List3-5
+ /*                                                
+
+    int型態與double型態性質的不同與算術運算子     
+
+ */                                                
+
+                                                   
+
+ #include    <iostream.h>                          
+
+                                                   
+
+ int main(void)                                    
+
+ {                                                 
+
+     int a = 3.14;      //整數型態                  
+
+     int b = 2.95;     // 會捨棄小數點以下的部份
+
+                                                   
+
+     cout << "a = " << a << '\n';                    
+
+     cout << "b = " << b << '\n';                    
+
+     cout << "a + b = " << a + b << '\n';    // 和 
+
+     cout << "a - b = " << a - b << '\n';    // 差 
+
+                                                   
+
+     double x = 3.14;    //浮點數型態          
+
+     double y = 2.95;                              
+
+                                                   
+
+     cout << "x = " << x << '\n';                  
+
+     cout << "y = " << y << '\n';                  
+
+     cout << "x + y = " << x + y << '\n';    // 和 
+
+     cout << "x - y = " << x - y << '\n';    // 差 
+
+                 
+
+     return (0); 
+
+ }               

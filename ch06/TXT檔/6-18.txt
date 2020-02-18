@@ -1,0 +1,40 @@
+ /*                                                       
+
+   　使用default引數的函數呼叫                
+
+ */                                                       
+                                               
+
+ #include     <iostream.h>                                
+
+
+ //--- "表示 "第 i 項=(x, y) ---//                  
+
+ void display(int i, int x = 0, int y = 0)                
+
+ {
+
+     cout << i << "項目＝( " << x << ',' << y << ")\n";   
+
+
+ }                                                      
+
+
+ int main(void)                                         
+
+ { 
+
+     display(1);             // 和 display(1, 0, 0); 相同 
+
+     display(2, 1);          //和 display(2, 1, 0); 相同
+
+     display(3, 2, 3);                                  
+
+                                                        
+
+     return (0);                                        
+
+ }                                                      
+   
+
+ 

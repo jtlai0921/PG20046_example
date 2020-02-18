@@ -1,0 +1,69 @@
+/*                                                                               
+
+    ‰¼‘zµêÀÀ°òÂ¦Ãþ§O¤§ªì©l¤Æ                                                      
+
+*/                                                                               
+
+                                                                                 
+
+#include    <iostream.h>                                
+
+class V1 {                                              
+
+public:                                                 
+    V1(void) { cout << "±NV1ªì©l¤Æ\n"; }               
+
+};                                                   
+                                                                                 
+
+class V2 {
+
+public:                                                                          
+
+    V2(void) { cout << "±NV2ªì©l¤Æ\n"; }                                         
+
+};                                                                               
+
+                                                                                 
+
+class X : public virtual V1, public virtual V2 {
+
+public:                                                                          
+
+    X(void) { cout << "±NXªì©l¤Æ\n"; }                                          
+
+};                                                                               
+
+                                                                                 
+
+class Y : public virtual V2, public virtual V1 {
+
+public:                                                                          
+
+    Y(void) { cout << "±NYªì©l¤Æ\n"; }                                          
+
+};                                                                               
+
+                                                                                 
+
+class Z : public X, public Y {
+
+public:                                                                          
+
+    Z(void) { cout << "±NZªì©l¤Æ\n"; }                                          
+
+};                                                                               
+
+                                                                                 
+
+int main(void)                                                                   
+
+{ 
+
+    Z dummy;                                                                     
+
+                                                                                 
+
+    return (0);                                                                  
+
+}                                                                                

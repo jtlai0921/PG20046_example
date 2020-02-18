@@ -1,0 +1,60 @@
+ /*                                          
+
+    顯示輸入月份的季節（可反覆查詢）
+
+ */                                          
+
+                                             
+ #include    <iostream.h>           
+
+                                    
+
+ int main(void)                      
+
+ {                                  
+
+    char  cont; //是否繼續執行處理
+
+                                     
+
+    do {                             
+
+       int month;                   
+
+                                     
+
+       cout << "請輸入月份：";
+
+       cin >> month;                 
+
+                                     
+
+       if (month >= 3 && month <= 5) 
+
+             cout << month << "月是春天。\n";  
+
+       else if (month >= 6 && month <= 8)        
+
+             cout << month << "月是夏天。\n";  
+
+       else if (month >= 9 && month <= 11)       
+
+             cout << month << "月是秋天。\n";  
+
+       else                                      
+
+             cout << month << "月是冬天。\n";  
+
+                                                 
+
+       cout << "是否繼續執行？（Ｙ／Ｎ）";   
+
+       cin >> cont;                              
+
+     } while (cont == 'Y' || cont == 'y');       
+
+                                                 
+
+     return (0);                                 
+
+ }                                               

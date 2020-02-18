@@ -1,0 +1,103 @@
+//--------------------------------------------------------------------// 
+
+//  √d™´√˛ßO(πÍ≤{≥°§¿)                       "pet.c" Å@        // 
+
+//--------------------------------------------------------------------// 
+
+                                                                                 
+
+#include    <string.h>                                                           
+
+                                                                                 
+
+#include    "pet.h"                                                              
+
+                                                                                 
+
+//--- ´ÿ∫c§∏  ---//                                                       
+
+Pet::Pet(PetType t, char* n)                                                     
+
+{
+
+    kind = t;                                                                    
+
+    strcpy(name, n);                                                             
+
+}                                                                                
+
+                                                                                 
+
+//--- øÈ§J ---//                                                                 
+
+void Pet::Input(void)                                                            
+
+{ 
+
+    int k;                                                                       
+
+    do {
+
+        cout << "´~∫ÿ  °i0°L™Ø,  1°Løﬂ,  2°LµU°j : ";                             
+
+        cin >> k;                                                                
+
+    } while (k < Dog || k > Monkey);                                             
+
+    kind = PetType(k);                                                           
+
+    cout << "¶W¶r: ";                                                           
+
+    cin >> name;                                                                 
+
+}                                                                                
+
+                                                                                 
+
+//--- ¶€ß⁄§∂≤– ---//                                                         
+
+void Pet::Sintro(void)                                                           
+
+{  
+
+    cout << "ß⁄¨O";                                                              
+
+    switch (kind) {
+
+     case Dog :     cout << "™Ø"; break;                                         
+
+     case Cat :     cout << "øﬂ"; break;                                         
+
+     case Monkey :  cout << "µU"; break;                                         
+
+    }                                                                            
+
+    cout << "ß⁄™∫¶W¶r¨O" << name << "!!\n";                        
+
+}                                                                                
+
+                                                                                 
+
+//--- √d™´√˛ßO°E¨yµ{¥°§JπB∫‚§léZéq ---//                                   
+
+ostream& operator<<(ostream& s, const Pet& p)                                    
+
+{
+
+    s << "{ ";                                                                   
+
+    switch (p.Type()) { 
+
+     case Pet::Dog    : s << "™Ø, "; break;                                      
+
+     case Pet::Cat    : s << "øﬂ, "; break;                                      
+
+     case Pet::Monkey : s << "µU, "; break;                                      
+
+    }                                                                            
+
+    s << p.Name() << " }";                                                       
+
+    return (s);                                                                  
+
+}                                                                                

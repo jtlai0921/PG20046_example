@@ -1,0 +1,74 @@
+ List6-13 
+ /*                                                                               
+
+     猜數字遊戲 (成員部分)                        　　　"main.c"             
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ void start(void);       // 【製作問題】 用亂數製作一個0~max的值   
+
+ int judge(int cnad);    // 【判斷解答】 如果cand 是正確解答，傳回0                                                                              
+ int input(void);        // 【解答的輸入】 使輸入0~max_no 的值    
+
+ int cont_game(void);    // 【繼續的確認】 確認是否繼續
+
+                                                                                  
+
+ int max_no = 9;         // 問題的上限                                           
+
+                                                                                  
+
+ int main(void)                                                                   
+
+ {
+
+     cout << "０～" << max_no << 請猜此數字\a\n\n";                    
+
+                                                                                  
+
+     do {                                  
+
+         int  hantei;                      
+
+         start();                          
+
+         do {                              
+
+             hantei = judge(input());      
+
+             if (hantei > 0)                
+                cout << "答案較大。\n";
+
+             else if (hantei < 0) 
+
+                cout << "答案較小。\n"; 
+
+        } while (hantei != 0);     
+
+        cout << "正確解答。\n";     
+
+    } while (cont_game());         
+
+                                  
+
+    return (0);                   
+
+}                                 
+
+
+
+
+
+
+
+
+
+          
+
+

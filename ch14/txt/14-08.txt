@@ -1,0 +1,75 @@
+ /*                                                                            
+
+   整數陣列類別IntAry第3版  ─使用實例─                                
+
+ */                                                                            
+
+                                                                               
+
+ #include    <new.h>                       
+
+ #include    <iomanip.h>                    
+
+ #include    <iostream.h>                                                      
+
+                                                                               
+
+ #include    "intary.h"                                                        
+
+                                                                               
+
+ void f(void)                                                                  
+
+ {
+
+     try {
+
+         IntAry  x(10);                                                        
+
+         for (int i = 0; i < 15; i++)                                          
+
+             x[i] = i;                                                         
+
+     }                                                                         
+
+     catch (IntAry::RangeErr x) {
+
+         cout << "足標溢值 : " << x.Index() << '\n';               
+
+         return;                                                               
+
+     }                                                                         
+
+     catch (xalloc) {
+
+         cout << "確保記憶體失敗。\n";                             
+
+         exit (1);                                   // 強制結束              
+
+     }                                                                         
+
+                                                                               
+
+     cout << "函數f順利結束。\n";                                   
+
+ }                                                                             
+
+                                                                               
+
+ int main(void)                                                                
+
+ {
+
+     f();                                                                      
+
+                                                                               
+
+     cout << "自函數f回到main函數。\n";                        
+
+                                                                               
+
+     return (0);                                                               
+
+ }                                                                             
+
+

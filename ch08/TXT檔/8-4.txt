@@ -1,0 +1,30 @@
+List 8-4
+ /*                                                    
+
+   由逗號運算子產生的for敘述的控制                   
+
+ */                                                    
+
+                                                       
+
+ #include    <iostream.h>                             │
+
+                                                      │
+
+ int main(void)                                        
+
+ {                                                     
+
+     int     i, j;                                     
+
+                                                       
+
+     for (i = 0, j = 0; i < 5; i++, j++)               
+
+         cout << "i = " << i << "  j = " << j << '\n'; 
+
+                                                       
+
+     return (0);                                       
+
+ }

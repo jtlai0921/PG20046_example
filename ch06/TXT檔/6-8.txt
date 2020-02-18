@@ -1,0 +1,69 @@
+List 6-8
+ /*                                                       
+ 
+    有效範圍解決運算子                                 
+ 
+ */                                                       
+ 
+           
+ 
+ #include    <iostream.h>                                 
+ 
+                                                          
+ 
+ int x = 555;                        　  /*--- (1) ---*/   
+ 
+                                                          
+ 
+ void print_x(void)                                       
+ 
+ {
+ 
+     cout << "x＝" << x << '\n';                 // (e)   
+ 
+ }                                                        
+ 
+                                                          
+ 
+ int main(void)                                           
+ 
+ {                                                        
+ 
+     cout << "x＝" << x << '\n';                 // (a)   
+ 
+                                                          
+ 
+     int x = 333;                        /*--- (2) ---*/   
+ 
+                                                          
+ 
+     cout << "x＝" << x << '\n';                 // (b)   
+ 
+                                                          
+ 
+     for (int i = 0; i < 5; i++) {                        
+ 
+         int x = i * 100;                /*--- (3) --*/    
+ 
+         cout << "x＝" << x << '\n';             // (c)   
+ 
+     }                                                    
+ 
+                                                          
+ 
+     cout << "x＝" << x << '\n';                 // (d)   
+ 
+     cout << "::x＝" << ::x << '\n';             // (e)   
+ 
+                                                          
+ 
+     print_x();                                           
+ 
+                                                          
+ 
+     return (0);                                          
+ 
+ }                                                        
+ 
+
+ 

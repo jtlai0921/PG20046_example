@@ -1,0 +1,37 @@
+
+------------------------------------------------------------------------// 
+
+ //  銀行帳戶類別account（實現部分）                          "account.c"         
+
+ 
+------------------------------------------------------------------------// 
+
+                                                                                  
+
+ #include    "account.h"                                                           
+
+                                                                                  
+
+ account::account(long no, long sav) {       // 建構元                   
+
+     number = no;                                                                 
+
+     savings = sav;                                                                
+
+ }                                                                                
+
+                                                                                  
+
+ void account::save(long money) {         // 存錢至帳戶內
+
+     savings += money;                                                             
+
+ }                                                                                
+
+                                                                                  
+
+ void account::withdraw(long money) {         // 自帳戶提款                 
+
+     savings -= money;                                                             
+
+ }                                                                                

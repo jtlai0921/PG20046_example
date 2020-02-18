@@ -1,0 +1,44 @@
+ /*                                                                             
+
+    Counter類別Counter第2版  ─使用實例─                              
+
+ */                                                                             
+
+                                                                                
+
+ #include    <iostream.h>                                   
+
+ #include    "counter.h"                                    
+
+ int main(void)                                             
+
+ {                                                          
+
+     Counter x, y;                                          
+
+     for (int i = 0; i < 5; i++)             // 遞增（countup）
+
+         cout << x++ << ' ' << ++y << '\n';                     
+
+                                                            
+
+     while (x)                               // 遞減（countdown）             
+
+         cout << x-- << ' ' << --y << '\n';                                     
+
+                                                                                
+
+     return (0);                                                                
+
+ }                                                                              
+執行結果
+  0 1
+  1 2
+  2 3
+  3 4
+  4 5
+  5 4
+  4 3
+  3 2
+  2 1
+  1 0

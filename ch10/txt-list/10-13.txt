@@ -1,0 +1,47 @@
+ /*                                                                           
+
+     ¦r¦ê°}¦C (2ºû°}¦C)                                                 
+
+ */                                                                           
+
+                                                                              
+
+ #include    <iostream.h>                                  
+
+                                                           
+
+ const int   smax = 3;                                      
+
+ const int   slen = 6;                                       
+
+                                                                              
+
+ void print(char x[][slen], int n)                                            
+
+ {
+
+     if (n >= 0 && n < smax)                                                  
+
+         cout << x[n] << '\n';                                                
+
+ }                                                                            
+
+                                                                              
+
+ int main(void)                                                               
+
+ {
+
+     char    s[][slen] = {"Turbo", "NA", "DOHC"};                             
+
+                                                                              
+
+     for (int i = 0; i < smax; i++)                                           
+
+         print(s, i);                                                         
+
+                                                                              
+
+     return (0);                                                              
+
+ }                                                                            

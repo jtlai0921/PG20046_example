@@ -1,0 +1,27 @@
+ //---------------------------------------------------------------------// 
+
+ //  ¡iint¡jµ²¦X°}¦CÃş§O  AcAint¡]¹ê²{³¡¤À¡^j                 "apcaint.c"       // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                             
+
+ #include    "acaint.h"                                                      
+
+                                                                             
+
+ //----- ¨¬¼Ğ¹Bºâ¤l-----//                                                
+
+ int& AcAint::operator[](char* kstr)                                         
+
+ {
+
+     ANint*& ptr = (ANint*)*Search(&(BinNode*)tree, kstr);                   
+
+     if (ptr == NULL)                                                        
+
+         ptr = new ANint(kstr);                                              
+
+     return (ptr->data);                                                     
+
+ }                                                                           

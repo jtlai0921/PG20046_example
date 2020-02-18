@@ -1,0 +1,34 @@
+/*
+
+    顯示輸入的2個數值之和
+
+*/
+                                       
+
+ #include    <iostream.h>              
+
+                                       
+
+ int main(void)                        
+
+ {                                     
+
+     int     x;          //整數x的宣言
+
+     int     y;          //整數y的宣言 
+                                       
+
+     cout << "輸入x：";          // 提示輸入x   
+
+     cin >> x;                   // 將x以整數讀取
+
+                                      
+
+     cout << "請輸入y：";           // 提示輸入y        
+
+     cin >> y;                      // 將y以整數讀取      
+
+     cout << "X+Y是"<<x+y<<"。\n";                       
+     return (0);                                                            
+
+ }                                                                          

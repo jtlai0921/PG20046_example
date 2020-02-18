@@ -1,0 +1,59 @@
+ /*                                                                              
+
+     日期類別Gdate  ─使用實例─                                                  
+
+ */                                                                              
+
+                                                                                 
+
+ #include    <iostream.h>                 
+
+                                         
+
+ #include    "date.h"                   
+
+                                          
+
+ int main(void)                           
+
+ {                                        
+
+     Date  Birthday(1963, 11, 18);         
+
+                                          
+
+     Gdate Today;                                                                
+
+     Gdate Date1(1995);                                                          
+
+     Gdate Date2(10, Gdate::Meiji,  11, 18);                                     
+
+     Gdate Date3(10, Gdate::Taisho, 11, 18);                                     
+
+     Gdate Date4(10, Gdate::Showa,  11, 18);                                     
+
+     Gdate Date5(10, Gdate::Heisei, 11, 18);                                     
+
+                                                                                 
+
+     cout << "Birthday : " << Birthday << '\n';                                  
+
+                                                                                 
+
+     cout << "Today : " << Today << '\n';                                        
+
+     cout << "Date1 : " << Date1 << '\n';                                        
+
+     cout << "Date2 : " << Date2 << '\n';                                        
+
+     cout << "Date3 : " << Date3 << '\n';                                        
+
+     cout << "Date4 : " << Date4 << '\n';                                        
+
+     cout << "Date5 : " << Date5 << '\n';                                        
+
+                                                                                 
+
+     return (0);                                                                 
+
+ }                                                                               

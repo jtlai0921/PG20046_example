@@ -1,0 +1,45 @@
+ /*                                                                      
+
+     字串的表達例題                                                   
+
+ */                                                                      
+
+                                                                         
+
+ #include    <string.h>                            
+
+ #include    <iostream.h>                           
+
+                                                    
+
+ int main(void)                                    
+
+ {                                                  
+
+     char    ary[10] = "ABC";                                            
+
+     char*   ptr = "ABC";                                                
+
+                                                                         
+
+     cout << "陣列：" << ary << '\n';                                
+
+     cout << "指標：" << ptr << '\n';                                
+
+                                                                         
+
+     strcpy(ary, "12345");                                               
+
+     ptr = "12345";                                                      
+
+                                                                         
+
+     cout << "陣列：" << ary << '\n';                                
+
+     cout << "指標：" << ptr << '\n';                                
+
+                                                                         
+
+     return (0);                                                         
+
+ }                                                                       

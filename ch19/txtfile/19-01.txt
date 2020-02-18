@@ -1,0 +1,71 @@
+ /*                                                                               
+
+     cat…檔案之連續輸出                                              
+
+ */                                                                               
+
+                                                                                  
+
+ #include    <fstream.h>                                                          
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ //----- 複製輸入src至輸出dst -----//                                       
+
+ void copyfile(istream& src, ostream& dst)                                        
+
+ {
+
+     char ch;                                                                     
+
+                                                                                  
+
+     while (src.get(ch))                                                          
+
+         dst.put(ch);                                                             
+
+ }                                                                                
+
+                                                                                  
+
+ int main(int argc, char* argv[])                                                 
+
+ {
+
+     if (argc < 2)                           // 無引數時                
+
+         copyfile(cin, cout);                // 標準輸入→標準輸出             
+
+     else {
+
+         while (--argc > 0) {
+
+             ifstream input;                                                      
+
+             input.open(*++argv);                                                 
+
+             if (!input) {
+
+                 cerr << "檔案" << *argv << 無法正確打開\n";                          
+
+                 return (1);                                                      
+
+             } else {
+
+                 copyfile(input, cout);                                           
+
+                 input.close();                                                   
+
+             }                                                                    
+
+         }                                                                        
+
+     }                                                                            
+
+                                                                                  
+
+     return (0);                                                                  
+
+ }                                                                                

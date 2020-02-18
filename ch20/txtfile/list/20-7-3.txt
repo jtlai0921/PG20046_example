@@ -1,0 +1,23 @@
+                                                             
+
+ //--- 線性串列版‧表類別 ---//                    
+
+ template <class T>                                          
+
+ class SlistTable : public Table<T>, public Slist<T> { 
+
+     Slink<T>*   ptr;                                        
+
+ public:                                                     
+
+     SlistTable(void)        { }                             
+
+     void SearchFirst(void)  { ptr = First(); }              
+
+     void SearchNext(void)   { ptr = ptr->Next(); }          
+
+     Boolean Exhausted(void) { return (ptr == Last()); }     
+
+     Boolean Found(T x)      { return (ptr->Data() == x); }  
+
+ };                                                          

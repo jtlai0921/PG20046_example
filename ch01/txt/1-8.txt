@@ -1,0 +1,42 @@
+List1-8
+/*
+
+   顯示int型態、double型態及其物件的大小。
+
+*/
+
+                                        
+
+ #include    <iostream.h>               
+
+                                        
+
+ int main(void)                         
+
+ {                                      
+
+     int x;                             
+
+     cout << "int型態的大小：" << sizeof(int) << '\n';         
+
+     cout << "變數a的大小：" << sizeof(x)   << '\n';         
+
+                                                                
+
+     double a;                                                  
+
+     cout << "double型態的大小：" << sizeof(double) << '\n';   
+
+     cout << "變數x的大小：" << sizeof(a)      << '\n';    
+
+                                                                
+
+     return (0);                                                
+
+ }  
+                                                            
+執行結果一例
+int型態的大小:2
+變數a的大小:2
+double型態的大小:8
+變數x的大小:8

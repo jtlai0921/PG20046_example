@@ -1,0 +1,74 @@
+ /*                                                                             
+
+    從表搜尋                                                             
+
+ */                                                                             
+
+                                                                                
+
+ #include    <iostream.h>                                                       
+
+                                                                                
+
+ #include    "tary.h"                                                           
+
+                                                                                
+
+ //--- 從Ary <Type> 型態陣列a的開頭size個元素開始搜尋x ---//                   
+
+ template <class type>                                                          
+
+ int Search(const Ary<type>& a, int size, type x)     
+
+ {                                          
+
+     int found = 0;                          
+     for (found < size) {                     
+
+         if (a[found] == x) break;           
+
+         found++;                                                               
+
+     }                                                                          
+
+     return (found);                                                            
+
+ }                                                                              
+
+                                                                                
+
+ int main(void)                                                                 
+
+ {
+
+     Ary<int>    ai(10);                                                        
+
+     Ary<double> ad(10);                                                        
+
+                                                                                
+
+     for (int i = 0; i < 10; i++) {
+
+         ai[i] = i;                                                             
+
+         ad[i] = double(i);                                                     
+
+     }                                                                          
+
+                                                                                
+
+     cout << "ai裡是否有5：" << Search(ai,  5, 10) << '\n';             
+
+     cout << "ai裡是否有15：" << Search(ai, 15, 10) << '\n';             
+
+                                                                                
+
+     cout << "ad裡是否有5.0：" << Search(ad,  5.0, 10) << '\n';         
+
+     cout << "ad裡是否有15.0：" << Search(ad, 15.0, 10) << '\n';         
+
+                                                                                
+
+     return (0);                                                                
+
+ }                                                                           

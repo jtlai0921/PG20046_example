@@ -1,0 +1,106 @@
+
+ /*----------------------------------------------------------------------     
+
+      線性串列版‧表類別                                           
+
+ ----------------------------------------------------------------------*/     
+
+ //--- 線性串列節點 ---//                                                 
+
+ template <class T> class Slink { 
+
+     friend class Slist<T>;                                                   
+
+ private:                                                                     
+
+     Slink*  next;               // 指向下個元素的指標
+
+     T       data;               //資料                                   
+
+ public:                                                                      
+
+     Slink()     { }                                                          
+
+     Slink(T x)  { data = x; }                                                
+
+     Slink<T>* Next(void) { return (next); }                                  
+
+     T         Data(void) { return (data); }                                  
+
+ };                                                                           
+
+                                                                              
+
+ //--- 線性串列 ---//                                                       
+
+ template <class T> class Slist {
+
+ private:                                                                     
+
+     Slink<T>*   first;          // 指向開頭元素的指標
+
+     Slink<T>*   last;           // 指向末端元素的指標
+
+ public:                                                                      
+
+     Slist(void) { first = last = new (Slink<T>); }      // 形成串列        
+
+     ~Slist()    { delete first; }                       // 刪除串列        
+
+     Slist<T>& Insert(Slink<T>&);                        //插入元素          
+
+     Slist<T>& Clear(void);                              // 刪除元素          
+
+     Slink<T>* First(void) { return (first); }           // 開頭元素          
+
+     Slink<T>* Last(void)  { return (last); }            // 末端元素          
+
+ };                                                                           
+
+                                                                              
+
+ // 插入元素                                                                  
+
+ template <class T> Slist<T>& Slist<T>::Insert(Slink<T>& x)                   
+
+ { 
+
+     Slink<T>* ptr = first;                                                   
+
+     first = new Slink<T>;                                                    
+
+     *first = x;                                                              
+
+     first->next = ptr;                                                       
+
+     return (*this);                                                          
+
+ }                                                                            
+
+                                                                              
+
+ // 刪除元素                                                                  
+
+ template <class T> Slist<T>& Slist<T>::Clear(void)                           
+
+ {
+
+     Slink<T>* ptr = first;                                                   
+
+     while (ptr != last) {
+
+         Slink<T>* next = ptr->next;                                          
+
+         delete ptr;                                                          
+
+         ptr = next;                                                          
+
+     }                                                                        
+
+     first = last;                                                            
+
+     return (*this);                                                          
+
+ }                                                                            
+
+                                                                              

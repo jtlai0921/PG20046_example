@@ -1,0 +1,130 @@
+ //--------------------------------------------------------------------// 
+
+ //  ƒ~©”™©√d™´√˛ßOPet°]§∂≠±≥°§¿°^Åj              "pet.h"           // 
+
+ //---------------------------------------------------------------------// 
+
+                                                                                  
+
+ #include    <iostream.h>                                                         
+
+                                                                                  
+
+ //=====√d™´√˛ßO=====/                                                      
+
+ class Pet {                          
+                              
+
+ public:                                                                          
+
+     typedef char    PetName[20];                                                 
+
+ protected:                                                                       
+
+
+     PetName name;                                   //¶W¶r           
+
+ public:                                                                          
+
+     Pet(char* n = "");                                  //´ÿ∫c®Áº∆É^        
+
+     char*   Name(void) { return (name); }               //∂«¶^¶W¶r       
+
+     virtual void Input(void)  {                         //°iµÍ¿¿®Áº∆°j
+
+         cout << "¶W¶r: "; cin >> name;                       //øÈ§J
+     }                                                                            
+
+     virtual void Sintro(void) {                            //°iµÍ¿¿®Áº∆°j
+
+         cout << "ß⁄™∫¶W¶r¨O" << name << "Ç≈Ç∑ÅB°C\n";         //¶€ß⁄§∂≤–
+     }                                                                            
+
+ };                                                                               
+
+ ostream& operator<<(ostream&, const Pet&);               // ¥°§JπB∫‚§l    
+
+                                                                                  
+
+ //===== ™Ø√d™´√˛ßO =====//                                                   
+
+ class Pdog : public Pet {
+
+ public:                                                                          
+
+     typedef char        DogKind[20];                                             
+
+ protected:                                                                       
+
+     DogKind kname;                                      //´~∫ÿ               
+
+ public:                                                                          
+
+     Pdog(char* n = "", char* k = "");                                            
+
+     void Input(void) {                                            // øÈ§J   
+
+         Pet::Input();                                                            
+
+         cout << "´~∫ÿ: "; cin >> kname;                                         
+
+     }                                                                            
+
+     void Sintro(void) {                                           // ¶€ß⁄§∂≤–
+
+         cout << "ß⁄¨O" << kname << "°Cß⁄™∫¶W¶r¨O" << name << "°C®L !!\n";                 
+
+     }                                                                            
+
+ };                                                                               
+
+                                                                                  
+
+ //===== øﬂ√d™´√˛ßO =====//                                                   
+
+ class Pcat : public Pet { 
+
+ public:                                                                          
+
+     Pcat(char* n = "") : Pet(n) { }                                              
+
+     // §£©w∏q¶®≠˚®Áº∆InputíËã`ÇµÇ»Ç¢                                               
+
+     void Sintro(void) {                                       // ¶€ß⁄§∂≤–é©å»è–âÓ    
+
+         cout << "ß⁄™∫¶W¶r¨O" << name << "°Cÿp!!\n";                          
+
+     }                                                                            
+
+ };                                                                               
+
+                                                                                  
+
+ //===== /µU√d™´√˛ßO=====//                                                   
+
+ class Pmonkey : public Pet {
+
+ private:                                                                         
+
+     int age;                                                      //¶~ƒ÷     
+
+ public:                                                                          
+
+     Pmonkey(char* n = "", int a = 0) : Pet(n) { age = a; }                       
+
+     void Input(void) {                                            // øÈ§J  
+
+         Pet::Input();                                                            
+
+         cout << "¶~ƒ÷: "; cin >> age;                                           
+
+     }                                                                            
+
+     void Sintro(void) {                                      // ¶€ß⁄§∂≤–
+
+         cout << "ß⁄" << age << "∑≥, ß⁄™∫¶W¶r¨O" << name << "°CºT!!\n";                 
+
+     }                                                                            
+
+ };                                                                               
+                              

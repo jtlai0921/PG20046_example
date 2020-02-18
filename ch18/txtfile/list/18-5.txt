@@ -1,0 +1,40 @@
+ /*                                                   
+
+   ¡iint¡jµ²¦X°}¦CÃþ§O  AcAint  ¤§¨Ï¥Î¹ê¨Ò—á            
+
+ */                                                   
+
+                                                      
+
+ #include    <iostream.h>                             
+
+                                                      
+
+ #include    "acaint.h"                               
+
+                                                      
+
+ int main(void)                                       
+
+ 
+                                                      
+
+     AcAint  x;              // intµ²¦X°}¦C
+
+                                                      
+
+     x["¥x¥_*"] = 0;                                    
+
+     x["¥x¤¤"] = 100;                                 
+
+     x["°ª¶¯"] = x["¥x¤¤"] / 2;                      
+
+                                                      
+
+     x.Put();                                         
+
+                                                      
+
+     return (0);                                      
+
+ }                                                    

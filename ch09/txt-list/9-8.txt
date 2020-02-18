@@ -1,0 +1,76 @@
+/*                                           
+
+　　使用梯形公式的積分程式 (第2版) 
+
+*/                                           
+
+                                             
+
+#include    <iostream.h>                     
+
+                                             
+
+ double f(double x)    //--- ??f ---//                                       
+
+ { 
+
+ 　　return (x * x);                                                            
+
+ }                                                                              
+
+                                                                                
+
+ double g(double x)    //--- ??g ---//                                       
+
+ {
+
+ 　　return (x * x * x + 3 * x * x);                                            
+
+ }                                                                              
+
+                                                                                
+
+ //--- 使用梯形公式將函數func(x) 分割成n等份從x1積到x2為止的函數 --// 
+
+ double daikei(double x1, double x2, int n, double (*func)(double x))           
+
+ {
+
+ 　　double s = 0.0;                                                            
+
+ 　　double step = (x2 - x1) / n;                                               
+
+ 　　for (int i = 0; i < n; i++)                                                
+
+ 　　　　s += ( (*func)(x1 + step*i) + (*func)(x1 + step*(i+1)) ) * step / 2.0;   
+
+ 　　return (s);                                                                
+
+ }                                                                              
+
+                                                                                
+
+ int main(void)                                                                 
+
+{
+
+    cout << "將f(x)分割成10等份從0.0積到1.0："                             
+
+         << daikei(0.0, 1.0, 10, f) << '\n';                                    
+
+                                                                                
+
+    cout << "將g(x)分割成15等份從1.0積到3.0："                             
+
+         << daikei(1.0, 3.0, 15, g) << '\n';                                    
+
+                                                                                
+
+    return (0);                                                                 
+
+ }  
+
+
+
+
+
